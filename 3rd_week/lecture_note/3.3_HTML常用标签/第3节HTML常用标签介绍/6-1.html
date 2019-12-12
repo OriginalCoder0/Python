@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>HTML标签实例--表单标签</h1>
+	
+	<form action="a.html" method="post" style="width:320px" >
+		<fieldset>
+		    <legend>个人信息：</legend>
+		     搜索：
+		    <input type="search" list="namelist" name="keywords"/>
+		    <datalist id="namelist">
+		        <option value="zhangsan">
+		        <option value="zhangsanfeng">
+		        <option value="zhangwuji">
+		        <option value="lisi">
+		        <option value="lixiaolong">
+		    </datalist><br/>
+		    姓名：<input type="text" /><br/>
+		    年龄：<input type="text" /><br/>
+		    城市：
+				<select name="city">
+				    <optgroup label="河北省">
+				          <option>石家庄</option>
+				          <option>保定</option>
+				          <option>廊坊</option>
+				    </optgroup>
+				    <optgroup label="河南省">
+				          <option>郑州</option>
+				          <option>安阳</option>
+				          <option>周口</option>
+				    </optgroup>
+				</select><br/>
+		  </fieldset>
+		  <br/><br/>
+		  <fieldset>
+		    <legend>健康信息：</legend>
+		    身高：<input type="text" /><br/>
+		    体重：<input type="text" /><br/>
+		</fieldset>
+	</form>
+
+</body>
+</html>

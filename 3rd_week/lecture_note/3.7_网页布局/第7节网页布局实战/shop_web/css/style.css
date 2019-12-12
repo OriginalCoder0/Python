@@ -1,0 +1,280 @@
+@charset "gb2312";
+/* CSS Document */
+
+/*==============================公共部分开始==============================*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td
+{ margin:0; padding:0;}/*css 重置*/
+body{ font:normal 12px/1.5 "宋体",Verdana, Geneva, sans-serif; color:#000;}
+ul{ list-style:none;}
+img{ border:0 none;}
+.clear{ clear:both;}
+a{ color:#000; text-decoration:none;}
+a:hover{ color:#f00; text-decoration:underline;}
+/*==============================公共部分结束==============================*/
+
+
+/*==============================全文链接==============================*/
+
+/*高级搜索更多链接*/
+.gj_search{ color:#fff; text-decoration:none;}
+.gj_search:hover{ color:#f00; text-decoration:underline;}
+
+/*网站公告更多链接*/
+.gg_link{ color:#db7630; text-decoration:none;}
+.gg_link:hover{ color:#f00; text-decoration:underline;}
+
+/*商品排行更多链接*/
+.spph_link{ color:#628f18; text-decoration:none;}
+.spph_link:hover{ color:#f00; text-decoration:underline;}
+
+/*热门商品更多链接*/
+.rmsp_link{ color:#db7630; text-decoration:none;}
+.rmsp_link:hover{ color:#f00; text-decoration:underline;}
+
+/*购物车更多链接*/
+.gwche_link{ color:#f00; text-decoration:none;}
+.gwche_link:hover{ color:#f00; text-decoration:underline;}
+
+/*推荐商品更多链接*/
+.tjsp_link{ color:#5aa7df; text-decoration:none;}
+.tjsp_link:hover{ color:#f00; text-decoration:underline;}
+
+/*打折商品更多链接*/
+.dzsp_link{ color:#a57fae; text-decoration:none;}
+.dzsp_link:hover{ color:#f00; text-decoration:underline;}
+
+/*文章列表页链接*/
+.xiayiye_link{ color:#f00; text-decoration:underline;}
+.xiayiye_link:hover{ color:#f00; text-decoration:none;}
+
+/*内页快捷标题链接*/
+.kuaijbt_link{ color:#628f18; text-decoration:none;}
+.kuaijbt_link:hover{ color:#f00; text-decoration:underline;}
+
+/*==============================全文链接结束==============================*/
+
+
+#container{ width:970px; margin:0 auto;}
+/*==============================header部分开始==============================*/
+#header{ position:relative;}
+#header_info{ width:970px; height:30px; line-height:30px; background:url(../image/header_info_bg.gif) no-repeat; position:relative;}
+.welcome{ float:left; padding-left:6px;}
+.reg{   text-align:center; position:absolute; right:10px;}
+#logo{ width:173px; height:63px; padding:10px 0; float:left}
+
+/*==============================导航部分开始==============================*/
+#nav{ height:28px; padding-top:58px; position:absolute; right:60px;}
+#nav ul li{ float:left; text-align:center;}
+#nav ul li a{ display:block; width:82px;  background:url(../image/nav_bg.gif) no-repeat left -28px; margin-left:5px;}
+#nav ul li a:hover{ background:url(../image/nav_bg.gif) no-repeat; color:#ff6600;}
+#nav ul li a#current{ background:url(../image/nav_bg.gif) no-repeat; font-weight:bold;}
+
+
+#nav ul li span{ display:block; height:28px; line-height:28px; background:url(images/nav_bg.gif) no-repeat top right; }
+
+#nav ul li a:hover span{ background:url(images/nav_bg.gif) no-repeat right -28px; cursor:pointer;}
+
+/*==============================搜索部分开始==============================*/
+#search{ position:relative; background:url(../image/search_bg.gif) repeat-x; height:59px; line-height:59px; margin-top:0px;}
+#search .keywords{ padding-left:25px; float:left; color:#fff; margin-right:90px;}
+#sear{ width:340px; margin-top:21px; height:19px;}
+#search .btn{ position:absolute; top:21px; top:22px!important; width:47px; height:22px; left:767px; }
+#search span{ padding-left:73px; padding-left:68px!important; position:absolute; margin-top:5px;}
+
+
+/*==============================主体内容开始==============================*/
+#content{ width:970px; margin:0 auto; overflow:hidden;}
+
+/*==============================主体内容左侧开始==============================*/
+#content .side{ float:left;}
+
+/*==============================登录开始==============================*/
+#content .side .login{ width:267px; height:127px; background:url(../image/login_bg.gif) no-repeat;}
+#content .side .login .h2_1{ font-size:12px; color:#fff; font-weight:blod; height:22px; line-height:22px; padding-left:25px;}
+#content .side .login .neirong{ padding:10px; text-align:center}
+#content .side .login .frm_cont{margin-bottom:7px;}
+#content .side .login label{cursor:pointer;}
+#content .side .login .username input,#content .side .login .userpws input{ width:120px; height:18px; padding:0px 2px; border:1px solid #cadcb2;}
+
+
+
+/*==============================购物车==============================*/
+#content .side .gwc{ width:267px; height:139px; background:url(../image/zixun_bg.gif) no-repeat;}
+#content .side .gwc .h2_1{ font-size:12px; color:#fff; font-weight:blod; height:22px; line-height:22px; padding-left:33px;}
+#content .side .gwc .neirong{ padding:8px; position:relative;}
+#content .side .gwc dl dd{  background:url(../image/gouwutubiao.gif) no-repeat 51px 2px;; padding-left:70px; margin:10px 0;}
+#content .side .gwc dl dt{ position:absolute; right:25px;}
+
+/*==============================商品排行==============================*/
+#content .spph{ width:265px; height:271px; float:left; position:relative;border:1px solid #95cd46;}
+#content .spph .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .spph .neirong{ padding:8px;}
+#content .spph .more{ position:absolute; top:4px; right:7px;}
+#content .spph .neirong ul{ margin:0px 3px 3px;}
+#content .spph .neirong ul li{ padding-left:25px; margin-bottom:3px; background:url(../image/spph_ico.gif) no-repeat;}
+#content .spph .neirong ul li.a{ background-position:0 2px;}
+#content .spph .neirong ul li.b{ background-position:0 -22px;}
+#content .spph .neirong ul li.c{ background-position:0 -46px;}
+#content .spph .neirong ul li.d{ background-position:0 -70px;}
+#content .spph .neirong ul li.e{ background-position:0 -94px;}
+#content .spph .neirong ul li.f{ background-position:0 -118px;}
+#content .spph .neirong ul li.g{ background-position:0 -141px;}
+#content .spph .neirong ul li.h{ background-position:0 -166px;}
+#content .spph .neirong ul li.i{ background-position:0 -190px;}
+#content .spph .neirong ul li.j{ background-position:0 -215px;}
+#content .spph .neirong ul li.k{ background-position:0 -240px;}
+
+
+
+/*==============================main内容开始==============================*/
+#content .main{ width:698px; margin-left:5px; float:right;}
+
+/*==============================图片轮显==============================*/
+#content .main .lunxian{ width:468px; height:273px; float:left;}
+
+/*==============================公告开始==============================*/
+#content .main .side_r{ width:225px; height:273px; float:left; margin-left:5px; position:relative;}
+#content .main .side_r .gonggao{ height:271px;border:1px solid #f9d0a4;}
+#content .main .side_r .gonggao .h2_2{ font-size:12px; color:#dd7633; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/gonggao_bg.gif) repeat-x}
+#content .main .side_r .gonggao .neirong{ padding:8px;}
+#content .main .side_r .gonggao .more{ position:absolute; top:4px; right:7px;}
+#content .main .side_r .gonggao .neirong ul{ margin:0px 3px 3px;}
+#content .main .side_r .gonggao .neirong li{ padding-left:15px; margin-bottom:3px; background:url(../image/bullet.gif) no-repeat 2px 7px;}
+
+
+/*==============================热门商品开始==============================*/
+#content .rmsp{ width:696px; height:271px;border:1px solid #f9d0a4; margin-left:5px; float:left; position:relative;}
+#content .rmsp .h2_3{ font-size:12px; color:#dd7633; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/gonggao_bg.gif) repeat-x}
+#content .rmsp .neirong{ padding:18px 8px 8px; overflow:hidden;}
+#content .rmsp .more{ position:absolute; top:4px; right:7px;}
+#content .rmsp .neirong ul li{ float:left; margin:0 4px 0 4px; display:inline;}
+#content .rmsp .neirong ul li p-img a{ text-align:center;}
+#content .rmsp .neirong ul li img{ padding:3px; border:1px solid #f4f3c5; text-align:center;}
+#content .rmsp .neirong ul li a:hover img{ padding:3px; border:1px solid #ccc;}
+#content .rmsp .neirong ul li .p-name { height: 42px; line-height:42px; display:inline; }/*标题换行*/
+#content .rmsp .neirong ul li .p-price { color: #999;}
+#content .rmsp .neirong ul li .p-price strong{ color:#f60; text-decoration:line-through;}
+#content .rmsp .neirong ul li .p-price-huiyuan{ color:#999;}
+#content .rmsp .neirong ul li .p-price-huiyuan strong{ color:#f60;}
+
+/*==============================商品分类==============================*/
+#content .spfl{ width:265px; height:271px; float:left; position:relative;border:1px solid #95cd46;}
+#content .spfl .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .spfl .neirong{ padding:8px; text-align:center;}
+#content .spfl .more{ position:absolute; top:4px; right:7px;}
+#content .spfl .neirong h2{font-size:12px; color:#000; font-weight:blod; height:32px; line-height:32px; padding-left:13px; }
+
+/*==============================推荐商品开始==============================*/
+#content .tjsp{ width:696px; height:271px;border:1px solid #d4dee5; margin-left:5px; float:left; position:relative;}
+#content .tjsp .h2_3{ font-size:12px; color:#5aa7df; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/tjsp_bg.gif) repeat-x}
+#content .tjsp .neirong{ padding:8px; overflow:hidden;}
+#content .tjsp .more{ position:absolute; top:4px; right:7px;}
+#content .tjsp .neirong ul li{ float:left; margin:0 4px 0 4px; display:inline;}
+#content .tjsp .neirong ul li p-img a{ text-align:center;}
+#content .tjsp .neirong ul li img{ padding:3px; border:1px solid #f4f3c5; text-align:center;}
+#content .tjsp .neirong ul li a:hover img{ padding:3px; border:1px solid #ccc;}
+#content .tjsp .neirong ul li .p-name { height: 42px; line-height:42px; display:inline; }/*标题换行*/
+#content .tjsp .neirong ul li .p-price { color: #999;}
+#content .tjsp .neirong ul li .p-price strong{ color:#f60; text-decoration:line-through;}
+#content .tjsp .neirong ul li .p-price-huiyuan{ color:#999;}
+#content .tjsp .neirong ul li .p-price-huiyuan strong{ color:#f60;}
+
+/*==============================网站调查==============================*/
+#content .wzdc{ width:265px; height:271px; float:left; position:relative;border:1px solid #95cd46;}
+#content .wzdc .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .wzdc .neirong{ padding:8px; text-align:center}
+#content .wzdc .more{ position:absolute; top:4px; right:7px;}
+#content .wzdc .neirong h2{ font-size:12px; color:#000; font-weight:normal; height:34px; line-height:34px;}
+#content .wzdc .neirong div{ height:27px;}
+
+/*==============================打折商品开始==============================*/
+#content .dzsp{ width:696px; height:271px;border:1px solid #e1d4e5; margin-left:5px; float:left; position:relative;}
+#content .dzsp .h2_3{ font-size:12px; color:#a57fae; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/dzsp_bg.gif) repeat-x}
+#content .dzsp .neirong{ padding:8px; overflow:hidden;}
+#content .dzsp .more{ position:absolute; top:4px; right:7px;}
+#content .dzsp .neirong ul li{ float:left; margin:0 4px 0 4px; display:inline;}
+#content .dzsp .neirong ul li p-img a{ text-align:center;}
+#content .dzsp .neirong ul li img{ padding:3px; border:1px solid #f4f3c5; text-align:center;}
+#content .dzsp .neirong ul li a:hover img{ padding:3px; border:1px solid #ccc;}
+#content .dzsp .neirong ul li .p-name { height: 42px; line-height:42px; display:inline; }/*标题换行*/
+#content .dzsp .neirong ul li .p-price { color: #999;}
+#content .dzsp .neirong ul li .p-price strong{ color:#f60; text-decoration:line-through;}
+#content .dzsp .neirong ul li .p-price-huiyuan{ color:#999;}
+#content .dzsp .neirong ul li .p-price-huiyuan strong{ color:#f60;}
+
+
+/*==============================促销商品==============================*/
+#content .cxsp{ width:480px; height:237px; float:left; position:relative;border:1px solid #95cd46;}
+#content .cxsp .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .cxsp .neirong{ padding:8px; overflow:hidden;}
+#content .cxsp .more{ position:absolute; top:4px; right:7px;}
+#content .cxsp .neirong .pic{ border:1px solid #ccc; padding:2px; width:152px; float:left}
+#content .cxsp .neirong .list{ float:left; margin-left:15px; width:280px;}
+#content .cxsp .neirong .list h2{ font-size:12px; color:#000; font-weight:blod; height:27px; line-height:27px; border-bottom:1px dashed #ccc;}
+#content .cxsp .neirong .list ul{ margin-top:9px;}
+#content .cxsp .neirong .list ul li{ margin-bottom:4px; padding-left:15px; background:url(../image/bullet1.gif) no-repeat 2px 7px;}
+#content .cxsp .neirong .list span{ float:right; color:#999;}
+
+/*==============================特价商品==============================*/
+#content .tejiasp{ width:481px; height:237px; float:left; position:relative;border:1px solid #95cd46; margin-left:5px;}
+#content .tejiasp .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .tejiasp .neirong{ padding:8px; overflow:hidden;}
+#content .tejiasp .more{ position:absolute; top:4px; right:7px;}
+#content .tejiasp .neirong .pic{ border:1px solid #ccc; padding:2px; width:152px; float:left;}
+#content .tejiasp .neirong .list{ float:left; margin-left:15px; width:280px;}
+#content .tejiasp .neirong .list h2{ font-size:12px; color:#000; font-weight:blod; height:27px; line-height:27px; border-bottom:1px dashed #ccc;}
+#content .tejiasp .neirong .list ul{ margin-top:9px;}
+#content .tejiasp .neirong .list ul li{ margin-bottom:4px; padding-left:15px; background:url(../image/bullet1.gif) no-repeat 2px 7px;}
+#content .tejiasp .neirong .list span{ float:right; color:#999;}
+
+/*==============================友情链接==============================*/
+#link{ width:968px; float:left; position:relative;border:1px solid #95cd46;}
+#link .h2_2{ font-size:12px; color:#628f18; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#link .neirong{ padding:11px; padding-left:23px;}
+#link .more{ position:absolute; top:4px; right:7px;}
+
+
+
+
+/*==============================服务条款==============================*/
+#service { padding-bottom: 10px; padding-left: 15px; padding-right: 15px; zoom: 1;  overflow: hidden; padding-top: 10px; border:1px solid #95cd46;}
+#service DL {padding-left: 20px; width: 165px; FLOAT: left}
+#service DT {zoom: 1; overflow: hidden}
+#service DD {padding-bottom: 10px; padding-left: 0px; padding-right: 0px; padding-top: 5px}
+#service DT B {background-image: url(image/css_scirpt.gif) no-repeat;  FLOAT: left; height: 31px; margin-right: 6px}
+#service DT STRONG {border-bottom: #e5e5e5 1px solid; padding-bottom: 2px; padding-left: 0px; padding-right: 0px; display: block; padding-top: 8px}
+
+/*==============================文章列表==============================*/
+#content .news_list{ width:736px; float:left; position:relative;border:1px solid #95cd46;}
+#content .news_list .h2_2{ font-size:12px; color:#628f18; font-weight:normal; height:26px; line-height:26px; padding-left:13px; background:url(../image/spph_bg.gif) repeat-x}
+#content .news_list .neirong{ padding:8px; overflow:hidden;}
+#content .news_list .neirong .news_title{ height:25px; line-height:25px; background:#efefef;}
+#content .news_list .neirong .biaoti{ float:left; padding-left:30px;}
+#content .news_list .neirong .time{ float:right; padding-right:50px;}
+#content .news_list .neirong ul{ margin:10px 15px 3px;}
+#content .news_list .neirong li{ padding-left:21px; margin-bottom:7px; background:url(../image/mod.jpg) no-repeat 2px 3px;;}
+#content .news_list .neirong span{ float:right; padding-right:30px;}
+
+
+/*==============================文章内容页==============================*/
+#content .news_list .neirong h2{ text-align:center; font-size:16px; font-weight:bold; height:50px; line-height:50px;}
+#content .news_list .neirong .info{ text-align:center; padding:5px 0;}
+#content .news_list .neirong .content_info{ padding:15px; color:#333; font-size:12px; text-indent:2em;}
+
+
+/*==============================推荐文章==============================*/
+#content .tj_list{ width:225px; height:273px; float:left; margin-left:5px; position:relative;}
+#content .tj_list{ height:271px;border:1px solid #f9d0a4;}
+#content .tj_list .h2_2{ font-size:12px; color:#dd7633; font-weight:blod; height:26px; line-height:26px; padding-left:13px; background:url(../image/gonggao_bg.gif) repeat-x}
+#content .tj_list .neirong{ padding:8px;}
+#content .tj_list .more{ position:absolute; top:4px; right:7px;}
+#content .tj_list .neirong ul{ margin:0px 3px 3px;}
+#content .tj_list .neirong li{ padding-left:15px; margin-bottom:3px; background:url(../image/bullet.gif) no-repeat 2px 7px;}
+
+
+
+/*==============================尾部==============================*/
+#footer{ width:970px; padding-top:25px; text-align:center;}
+#footer ul li{ display:inline; margin:15px 0; padding-left:10px; padding-right:10px; background:url(../image/line.gif) no-repeat center right;}
+#footer p{ text-align:center; line-height:65px;}
+

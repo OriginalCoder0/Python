@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS层叠样式表</title>
+        <style type="text/css">
+            div{width:400px;}
+            
+            div.c1{
+                font-style: italic;
+                font-weight: bold;
+                font-size:25px;
+                font-family: "宋体","微软雅黑";
+            }
+            /*效果同上的简写*/
+            div.c2{
+                font:italic bold 25px "宋体","微软雅黑";
+            }
+            /*推荐写法*/
+            div.c3{
+                font:18px/1.5 "宋体","微软雅黑";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS实例--字体属性font</h1>
+        <div class="c1">这次不知道是不是意外，很不好吃，买过N回了，以前芝士味道很浓，这回特别淡，还烤的没有颜色，白了吧叽的，味道和以前差太多了，希望是一个意外。为什么上面没有那个老爷爷的LOGO了呢？</div>
+        <div class="c2">这次不知道是不是意外，很不好吃，买过N回了，以前芝士味道很浓，这回特别淡，还烤的没有颜色，白了吧叽的，味道和以前差太多了，希望是一个意外。为什么上面没有那个老爷爷的LOGO了呢？</div>
+        <div class="c3">这次不知道是不是意外，很不好吃，买过N回了，以前芝士味道很浓，这回特别淡，还烤的没有颜色，白了吧叽的，味道和以前差太多了，希望是一个意外。为什么上面没有那个老爷爷的LOGO了呢？</div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                //获取所有按钮并添加点击事件
+                $("button").click(function(){
+                    //根据按钮上的内容执行对象的操作
+                    switch($(this).html()){
+                        case "全选":
+                            $("ul.uu input:checkbox").attr("checked",true);
+                            break;
+                        case "全不选":
+                            $("ul.uu input:checkbox").attr("checked",false);
+                            break;
+                        case "反选":
+                            var list = $("ul.uu input:checked");
+                            $("ul.uu input:checkbox").attr("checked",true);
+                            list.attr("checked",false);
+                            break;
+                    }
+                });
+                
+              
+            });
+        </script>
+        
+    </head>
+    <body>
+        <h3 id="hid">jQuery实例--文档处理--全选/全不选</h3>
+        <ul class="uu">
+            <li><input type="checkbox" name="likes[]" value="1"/> 苹果</li>
+            <li><input type="checkbox" name="likes[]" value="2"/> 橘子</li>
+            <li><input type="checkbox" name="likes[]" value="3"/> 哈密瓜</li>
+            <li><input type="checkbox" name="likes[]" value="4"/> 菠萝</li>
+            <li><input type="checkbox" name="likes[]" value="5"/> 芒果</li>
+        </ul>
+        <button>全选</button>
+        <button>全不选</button>
+        <button>反选</button>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS层叠样式表</title>
+        <style type="text/css">
+           div.dd{
+              width:300px;
+              height:300px;
+              border:1px solid #ddd;
+              float:left;
+              margin: 20px;
+           }
+           div.d1{
+              background-color:#ddd;
+              background-image: url("./images/1.gif");
+              background-repeat: no-repeat;
+              background-position: 50px 20px;
+           }
+
+           div.d2{
+              background: #ddd url("./images/1.gif") no-repeat 50px 20px;
+           }
+
+           div.d3{
+              background:url("./images/Meinv083.jpg") no-repeat -160px -336px;
+           }
+
+           div.d4{
+              width:80%;height:50px;
+              background: url("./images/repeat.png") repeat-x;
+           }
+
+           div.tag{
+              width:35px;height:35px;
+              background:url("./images/v_icon.png") no-repeat 0px 0px;
+
+           }
+           div.t32{background-position:-110px -120px; }
+           div.t32:hover{background-position:-110px -165px; }
+        </style>
+    </head>
+    <body>
+        <h1>CSS实例--背景属性</h1>
+        <div class="dd d1"></div>
+        <div class="dd d2"></div>
+        <div class="dd d3"></div>
+        <div class="dd d4"></div>
+      
+        <div style="clear: both;"></div>
+
+        <div class="tag t32"></div>
+    </body>
+</html>

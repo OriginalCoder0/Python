@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>在线相册信息管理</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<h2>在线相册信息管理</h2>
+    <br>
+    <p>
+        {% load static from staticfiles %}
+        <img src="{% static 'logo-album.png' %}" alt="Logo" width="240px">
+    </p>
+	<p><a href="{% url 'photos' 1 %}">进入相册管理 >></a></p>
+</body>
+</html>

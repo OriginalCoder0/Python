@@ -1,0 +1,85 @@
+{% extends "myadmin/base.html" %}
+
+
+{% block mainbody %}
+<h2>
+	商品信息浏览
+</h2>
+<form class="form-inline" action="{% url 'myadmin_goods_index' 1 %}" method="get">
+  <label>关键字：</label>
+  <input type="text" name="keyword" value="{{request.GET.keyword}}" class="input-small" placeholder="商品名称">
+  <label> &nbsp; 类别：</label>
+  <select name="typeid" class="span2">
+    <option value="0">全部</option>
+    {% for vo in typelist %}
+        <option value="{{ vo.id }}" {% if typeid == vo.id %}selected{% endif %}>{{vo.pname}}|--{{ vo.name }}</option>
+    {% endfor %}
+  </select>
+  <label> &nbsp; 状态：</label>
+  <select name="state" class="span1">
+	  <option value="">全部</option>
+	  <option value="1" {% if request.GET.state == '1' %}selected{% endif %}>新商品</option>
+	  <option value="2" {% if request.GET.state == '2' %}selected{% endif %}>在售</option>
+	  <option value="3" {% if request.GET.state == '3' %}selected{% endif %}>已下架</option>
+  </select>
+  <button type="submit" class="btn">搜索</button>
+  <a href="{% url 'myadmin_goods_index' 1 %}" class="btn">全部</a>
+</form>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>id号</th>
+			<th>商品名称</th>
+			<th>商品类别</th>
+			<th>图片</th>
+			<th>价格</th>
+			<th>点击量</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for vo in goodslist %}
+		<tr>
+			<td>{{ vo.id }}</td>
+			<td>{{ vo.goods }}</td>
+			<td>{{ vo.typename }}</td>
+			<td><img src="/static/goods/s_{{ vo.picname }}" width="40"/></td>
+			<td>{{ vo.price }}</td>
+			<td>{{ vo.clicknum }}</td>
+			<td>
+				{% if vo.state == 1 %}
+					<span style="color:green">新商品</span>
+				{% elif vo.state == 2 %}
+					在售
+				{% elif vo.state == 3 %}
+					已下架
+				{% else %}
+					<span style="color:red">无效状态</span>
+				{% endif %}
+			</td>
+			<td>
+				<a href="{% url 'myadmin_goods_edit' vo.id %}" class="btn btn-mini btn-primary">编辑</a>
+				<a href="{% url 'myadmin_goods_del' vo.id %}" class="btn btn-mini btn-danger">删除</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>				
+<div class="pagination">
+	<ul>
+		<li>
+			<a href="{% url 'myadmin_goods_index' pIndex|add:-1 %}?{{ mywhere|join:'&' }}">&laquo;</a>
+		</li>
+		{% for p in plist %}
+		<li {% if pIndex == p %}class="active"{% endif %}>
+			<a href="{% url 'myadmin_goods_index' p %}?{{ mywhere|join:'&' }}">{{p}}</a>
+		</li>
+		{% endfor %}
+		<li>
+			<a href="{% url 'myadmin_goods_index' pIndex|add:1 %}?{{ mywhere|join:'&' }}">&raquo;</a>
+		</li>
+
+	</ul>
+</div>
+{% endblock %}

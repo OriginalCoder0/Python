@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-3.1.0.min.js"></script>
+	<script>
+		$(function(){
+			$("li").css("color","red");  //document.getElementsByTagName("li")
+
+			$("ul li").css("color","blue");
+		});
+	</script>
+</head>
+<body>
+	<h2>JQuery的实例</h2>
+	<ul>
+		<li>aaaaaaaaaaa</li>
+		<li>aaaaaaaaaaa</li>
+		<li>aaaaaaaaaaa</li>
+		<li>aaaaaaaaaaa</li>
+	</ul>
+	<ol>
+		<li>bbbbbbbbbbb</li>
+		<li>bbbbbbbbbbb</li>
+		<li>bbbbbbbbbbb</li>
+		<li>bbbbbbbbbbb</li>
+		
+	</ol>
+	<script>
+		$("h2").click(function(){
+			$(this).css("color","red");
+			alert($(this).html());
+		});
+	</script>
+</body>
+</html>

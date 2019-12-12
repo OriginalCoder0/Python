@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>相册信息管理</title>
+    <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    -->
+
+    <style>
+        table tr td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+    <script type="text/javascript">
+        function doDel(url) {
+            if(confirm("确定要删除吗？")){
+                window.location = url
+            }
+        }
+    </script>
+</head>
+<body>
+	<center>
+        {% include 'myapp/photos/menu.html' %}
+
+        <h3>浏览相册信息</h3>
+        <table width="800" border="1">
+            <tr>
+                <th>ID</th>
+                <th>标题</th>
+                <th>缩略图</th>
+                <th>描述</th>
+                <th>添加时间</th>
+                <th>操作</th>
+            </tr>
+            {% for photo in photoslist %}
+                <tr>
+                    <td>{{ photo.id }}</td>
+                    <td>{{ photo.title }}</td>
+                    <td>
+                        <a href="/static/pics/{{ photo.filename }}" title="{{ photo.filename }}" target="_blank">
+                            <img src="/static/pics/s_{{ photo.filename }}" alt="{{ photo.filename }}">
+                        </a>
+                    </td>
+                    <td>{{ photo.comment }}</td>
+                    <td>{{ photo.addtime | date:'Y-m-d H:i:s' }}</td>
+                    <td>
+                        <a href="{% url 'editphotos' photo.id %}">编辑</a>
+                        <a href="javascript:doDel('{% url 'deletephotos' photo.id %}')">删除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        {% for i in pList %}
+			{% if i == pIndex %}
+				<b>{{i}}</b>
+			{% else %}
+				<a href="{% url 'photos' i %}">{{i}}</a>
+			{% endif %}
+		{% endfor %}
+
+
+	</center>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+    </head>
+    <body>
+        <h3>JavaScript实例--内置对象--日期对象</h3>
+        <div style="font-size:30px;" id="did"></div>
+        <input type="text" name="uname"/>
+        <script type="text/javascript">
+            setInterval(function(){
+                //创建日期对象
+                var date = new Date();
+                //date.setTime(1446560190000); //设置时间戳来获取指定的日期信息
+                //获取具体的年月日等信息
+                var y = date.getFullYear();
+                var m = date.getMonth()+1;
+                var d = date.getDate();
+                var hh= date.getHours();
+                var mm= date.getMinutes();
+                var ss= date.getSeconds();
+                //拼装
+                var str = y+"-"+m+"-"+d+" "+hh+":"+mm+":"+ss;
+                //放置到div层中
+                document.getElementById("did").innerHTML = str;
+            },1000);
+            
+
+            //setInterval(fun,1000)
+        </script>
+    </body>
+</html>

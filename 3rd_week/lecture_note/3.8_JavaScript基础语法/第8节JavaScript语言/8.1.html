@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+       <script type="text/javascript">
+           function doFun(b){
+                //获取输入框中的值
+                var m1= parseInt(document.myform.num1.value);
+                var m2= parseInt(document.myform.num2.value);
+
+                //根据b的值执行对应得操作
+                switch(b){
+                    case 1: var res = m1+"+"+m2+"="+(m1+m2); break;
+                    case 2: var res = m1+"-"+m2+"="+(m1-m2); break;
+                    case 3: var res = m1+"*"+m2+"="+(m1*m2); break;
+                    case 4: var res = m1+"/"+m2+"="+(m1/m2); break;
+                }
+                //将结果放入到输入框中
+                document.myform.res.value = res;
+           }
+       </script>
+    </head>
+    <body>
+        <h3>JavaScript实例--简单计算器</h3>
+        <form action="" name="myform" method="get">
+            数值1：<input type="text" name="num1" size="10"/><br/><br/>
+            数值2：<input type="text" name="num2" size="10"/><br/><br/>
+            结 果：<input type="text" name="res" readonly style="border:0px;" size="10"/><br/><br/>
+            <input type="button" onclick="doFun(1)" value="加"/>
+            <input type="button" onclick="doFun(2)" value="减"/>
+            <input type="button" onclick="doFun(3)" value="乘"/>
+            <input type="button" onclick="doFun(4)" value="除"/>
+        </form>
+    </body>
+</html>

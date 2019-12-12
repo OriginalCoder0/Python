@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+       
+    </head>
+    <body>
+        <h3>JavaScript实例--倒计时</h3>
+        <form name="myform">
+           <input type="text" size="4" name="h"/>时 
+           <input type="text" size="4" name="m"/>分 
+           <input type="text" size="4" name="s"/>秒 
+           <input type="button" onclick="doStart()" value="开始"/>
+           <input type="button" onclick="doStop()" value="暂停"/>
+           <input type="button" onclick="running()" value="继续"/>
+        </form>
+        <br/>
+        <div style="font-size:40px;" id="did">00:00:00</div>
+        <script type="text/javascript">
+           var hh=mm=ss=0;
+           var mytime=null;
+           //开始函数
+           function doStart(){
+              if(mytime==null){
+                //获取时分秒信息
+                hh = parseInt(document.myform.h.value);
+                mm = parseInt(document.myform.m.value);
+                ss = parseInt(document.myform.s.value);
+
+                running();
+              }
+           }
+
+           //执行倒计时函数
+           function running(){
+              //拼装时间信息，并放置到div中
+              document.getElementById("did").innerHTML = hh+":"+mm+":"+ss;
+              ss--; //ss-=1
+              if(ss<0){
+                ss=59;
+                mm--;
+                if(mm<0){
+                  mm=59;
+                  hh--;
+                  if(hh<0){
+                     alert("时间到！");
+                     return;
+                  }
+                }
+              }
+              //定时1000毫秒（1秒）后调用running函数
+              mytime = setTimeout("running()",1000);
+           }
+
+           //暂停函数
+           function doStop(){
+              if(mytime!=null){
+                 clearTimeout(mytime);
+                 mytime=null;
+              }
+           }
+        </script>
+    </body>
+</html>

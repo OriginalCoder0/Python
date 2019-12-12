@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>会员注册--兄弟缘鲜花网</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/common.css">
+		<link rel="stylesheet" type="text/css" href="./css/register.css">
+		<script src="./js/index.js" type="text/javascript"></script>
+		<script src="./js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+
+$(document).ready(function()
+{	$('#jsddm > li').bind('mouseover', jsddm_open);
+	$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+</script>
+	</head>
+	</head>
+	<body>
+		<div id="container">
+			<!--头部开始-->
+			<div id="header">
+				<!--header_top开始-->
+				<div class="header_top">
+					<div class="hearder_top_gun"><marquee direction="left" height="26" onMouseOut="this.start()" onMouseOver="this.stop()" scrollAmount="3.2"><font color="red"><u>你好，欢迎光临兄弟鲜花网！</u></font></marquee></div>
+					<div class="hearder_top_link">
+						<ul>
+							<li><a href="">关于我们</a></li>
+							<li><a style="color:red;font-weight:bold;" href="">补缴花款</a></li>
+							<li><a href="">订单查询</a></li>
+							<li><a href="">付款方式</a></li>
+							<li><a href="">收藏本站</a></li>
+							<li><a href="">帮助中心</a></li>
+							<li><a href="">购物车</a></li>
+							<li><a href="login.html" target="_blank">登陆</a></li>
+							<li><a style="color:red;font-weight:bold;" href="register.html" target="_blank">注册</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--header_top结束-->
+				<!--header_top2开始-->
+				<div class="header_top2">
+					<div class="header_top2_logo"><a href=""><img src="./images/logo.jpg" alt="兄弟缘鲜花网LOGO" title="兄弟缘鲜花网" width="400" height="112"></a></div>
+					<div class="header_top2_ri">
+						<ul>
+							<li><a href="">生日鲜花</a></li>
+							<li><a href="">城市专题</a></li>
+							<li><a href="">99朵玫瑰</a></li>
+							<li class="active"><a href="">父亲节</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--header_top2结束-->
+				<!--header_nav开始-->
+				<div class="header_nav">
+					<ul id="jsddm">
+						<li class="home zong"><a href="index.html">首页</a></li>
+						<li class="zong"><a href="xianhua.html" target="_blank">鲜花</a>
+							<ul class="zi">
+								<li><a href="#">恋人</a></li>
+								<li><a href="#">朋友</a></li>
+								<li><a href="#">送母亲</a></li>
+								<li><a href="#">送父亲</a></li>
+								<li><a href="#">同事</a></li>
+								<li><a href="#">老师</a></li>
+								<li><a href="#">客户</a></li>
+								<li><a href="#">病人</a></li>
+								<li><a href="#">领导</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">蛋糕</a>
+							<ul class="zi">
+								<li><a href="#">好利来</a></li>
+								<li><a href="#">品牌巧克力</a></li>
+								<li><a href="#">水果蛋糕</a></li>
+								<li><a href="#">鲜奶蛋糕</a></li>
+								<li><a href="#">祝寿蛋糕</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">水果礼篮</a>
+							<ul class="zi">
+								<li><a href="#">果篮</a></li>
+								<li><a href="#">酒篮</a></li>
+								<li><a href="#">巧克力蓝</a></li>
+								<li><a href="#">什锦蓝</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">商务鲜花</a>
+							<ul class="zi">
+								<li><a href="#">开业花篮</a></li>
+								<li><a href="#">商务鲜花</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">甜蜜爱情</a></li>
+						<li class="zong"><a href="">生日快乐</a>
+							<ul class="zi">
+								<li><a href="#">生日鲜花</a></li>
+								<li><a href="#">生日组合</a></li>
+								<li><a href="#">水果蛋糕</a></li>
+								<li><a href="#">鲜奶蛋糕</a></li>
+								<li><a href="#">巧克力蛋糕</a></li>
+								<li><a href="#">祝寿蛋糕</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">卡通花束</a>
+							<ul class="zi">
+								<li><a href="#">十二生肖</a></li>
+								<li><a href="#">红色心情</a></li>
+								<li><a href="#">粉色可爱</a></li>
+								<li><a href="#">紫色神秘</a></li>
+								<li><a href="#">蓝色经典</a></li>
+								<li><a href="#">黄色高贵</a></li>
+							</ul>
+						</li>
+						<li class="zong"><a href="">花盒</a></li>
+					</ul>
+					<a href=""><img src="./images/english.jpg" width="80" height="27" style="margin-top:6px;"></a>
+				</div>
+				<!--header_nav结束-->
+				<!--header_search开始-->
+				<div class="header_search">
+					<input type="search" size="25" name="sousuo" value="玫瑰" class="search"><input type="image" name="submit" class="sousuo" src="./images/sousuo.gif"><span style="float:left;margin-left:15px;"><font color="red"><b>热门词：</b></font>浪漫爱情　商业鲜花　卡通花束　巧克力蛋糕</span><span style="float:right; padding-right:30px;">购物车中有 <font color="red">0</font> 件商品</span>
+				</div>
+				<!--header_search结束-->
+			</div>
+			<!--头部结束-->
+			<!--主体开始-->
+			<div id="mainA">
+				<div class="zhuce_title"></div>
+				<div class="zhuce_text">
+					<table border="0" width="600" cellpadding="4" cellspacing="0" align="center">
+					<form action="" method="post" name="zhuce">
+						<tr>
+							<th align="left" width="100">会员名：</th>
+							<td><input type="text" name="username"></td>
+						</tr>
+						<tr>
+							<th align="left">密码(至少6位)：</th>
+							<td><input type="password" name="psw"></td>
+						</tr>
+						<tr>
+							<th align="left">确认密码：</th>
+							<td><input type="password" name="repsw"></td>
+						</tr>
+						<tr>
+							<th align="left">Email地址：</th>
+							<td><input type="email" name="email"></td>
+						</tr>
+						<tr>							
+							<td colspan="2" align="center"><input type="radio" name="agree" value="1" checked="">我已经阅读并同意 注册协议<font color="red">(提交注册如有浏览器提示运行加载项，请点运行！) </font></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="image" name="submit" src="./images/tijiao.gif"></td>
+						</tr>
+					</form>
+					</table>
+				</div>
+			</div>
+			<!--主体结束-->
+			<!--footer开始-->
+			<div id="footer">
+				<div class="footer_help">
+					<ul>
+						<h3>新手指南</h3>
+						<li><a href="">用户服务协议</a></li>
+						<li><a href="">积分及虚拟货币</a></li>
+						<li><a href="">购物流程</a></li>
+						<li><a href="">鲜花配送范围</a></li>
+					</ul>
+					<ul class="xian"></ul>
+					<ul>
+						<h3>如何付款</h3>
+						<li><a href="">支付说明</a></li>
+						<li><a href="">货到付款</a></li>
+						<li><a href="">银行汇款说明</a></li>
+						<li><a href="">在线支付</a></li>
+					</ul>
+					<ul class="xian"></ul>
+					<ul>
+						<h3>配送方式</h3>
+						<li><a href="">配送说明</a></li>
+						<li><a href="">鲜花范围</a></li>
+						<li><a href="">2月14日情人节鲜花</a></li>
+						<li><a href="">配送声明</a></li>
+						<li><a href="">9月10日教师节鲜花</a></li>
+					</ul>
+					<ul class="xian"></ul>
+					<ul>
+						<h3>售后服务</h3>
+						<li><a href="">售后服务</a></li>
+						<li><a href="">订单查询</a></li>
+					</ul>
+					<ul class="xian"></ul>
+					<ul>
+						<h3>相关知识</h3>
+						<li><a href="">朵数含义</a></li>
+						<li><a href="">鲜花物语</a></li>
+						<li><a href="">节日送花寓意</a></li>
+						<li><a href="">蛋糕订购说明</a></li>
+					</ul>
+					<ul class="xian"></ul>
+					<ul>
+						<h3>服务热线</h3>
+						<li>免长途费 24小时服务</li>
+						<li class="tel">400-123-4567</li>
+						<li>24小时在线咨询企业QQ</li>
+						<li class="qq">1234-567-890</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="footer_tu"></div>
+				<div class="footer_link">
+					<a href="">网站首页</a> |
+					<a href="">关于我们</a> |
+					<a href="">城市专题</a> |
+					<a href="">团购合作</a> |
+					<a href="">订花地图</a> |
+					<a href="">订花百科</a> |
+					<a href="">网上送花常识</a> |
+					<a href="">鲜花店加盟</a> |
+					<a href="">给我留言</a> |
+					<a href="">帮助中心</a> |
+					<a href="">联系我们</a>
+				</div>
+				<div class="footer_friend">
+					<b>新开鲜花店：</b>北京花店　上海花店　浙江花店　江苏花店　安徽花店　福建花店　广州花店　河北花店　天津花店　吉林花店　河北花店　山东花店　广东花店　广西花店<br>
+					<b>各省鲜花店：</b>河南　广东 湖南　四川　江苏　浙江　福建　云南　吉林　湖北　陕西　山西　山东　内蒙古　甘肃　宁夏　贵州　西藏　广西　青海　辽宁　天津　上海<br>
+					<b>友情链接：</b>中国礼品鲜花网　兄弟缘鲜花网　兄弟送花　兄弟鲜花　北京送花　上海送花　浙江送花　花店网址导航　北京鲜花速度　圣诞节礼物　天津送花　广东送花
+				</div>
+				<div class="footer_beian"></div>
+				<div class="footer_contact">
+					<strong>兄弟缘关键字：兄弟缘鲜花网　兄弟鲜花　北京送花　上海送花　浙江送花　鲜花预定　鲜花商城　网上送花　鲜花速递　异地订花　</strong><br>
+					7×24小时均可网上订花，正常配送时间：8:30-21:00（晚上仅限市区）。<br>
+					Copyright @ 2014-2019 All rights reserved. 全国服务热线：400-123-4567<br>
+					兄弟缘-版权所有,禁止非法复制
+				</div>
+			</div>
+			<!--footer结束-->
+		</div>
+	</body>
+</html>

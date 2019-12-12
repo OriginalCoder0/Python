@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS样式实例</title>
+        <style type="text/css">
+            /*公共样式*/
+            div,ul,li,a,h4,img{margin: 0px;padding: 0px;}
+            ul{list-style: none}
+            a{color:#222;text-decoration: none;}
+            a:hover{color:#f00;text-decoration:underline;}
+
+            div.box{width:500px;border:1px solid #95cd46;}
+            div.box .header{width:100%;height:26px;background:url("./images/spph_bg.gif") repeat-x 0px 0px;}
+            div.box .header a{
+                font-size:12px;
+                float:right;
+                line-height:26px;
+                margin-right: 6px;
+            }
+            div.box .header h4{
+                font-size:13px;
+                color:green;
+                line-height:26px;
+                margin-left:6px; 
+            }
+            div.box .content{width:100%; height:220px;}
+
+            div.box .content .right{
+                width:290px;
+                float: right;
+                padding:5px;
+                padding-right:10px;
+                margin: right:15px;
+            }
+            div.box .content .right h4{
+                font-size:14px;
+                line-height: 30px;
+                border-bottom: 1px dashed #666;
+                margin-bottom: 10px;
+            }
+            
+            div.box .content .right ul li{
+                line-height: 22px;
+                padding-left:15px;
+                background:url("./images/bullet.gif") no-repeat 5px 13px;
+
+            }
+            div.box .content .right ul li a{font-size:12px;}
+            div.box .content .right ul li a span{
+                float:right;color:#666;font-size:11px;}
+
+            div.box .content .left{
+                width:170px;
+                float: left;
+            }
+            div.box .content .left img{
+                border:1px solid #ddd;
+                padding: 4px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS实例:商品排行盒子模型</h3>
+        <div class="box">
+            <div class="header">
+                <a href="#">更多>></a>
+                <h4>特价商品</h4>
+            </div>
+            <div class="content">
+                <div class="right">
+                    <h4>大标题-特价商品</h4>
+                    <ul>
+                        <li><a href="#"><span>2011-06-06</span>简洁而新潮的实物配搭拍摄店铺</a></li>
+                        <li><a href="#"><span>2011-06-06</span>ByKiky原创新锐设计限定女装店</a></li>
+                        <li><a href="#"><span>2011-06-06</span>原创设计品牌---刹那优品女装</a></li>
+                        <li><a href="#"><span>2011-06-06</span>金熹衣柜时尚女装细节彰显品质</a></li>
+                        <li><a href="#"><span>2011-06-06</span>轻熟女风格原创设计女装店铺</a></li>
+                        <li><a href="#"><span>2011-06-06</span>爱尚衣橱坚持实拍！全店2件包邮</a></li>
+                        <li><a href="#"><span>2011-06-06</span>4皇冠美衣实拍 每日潮搭上新</a></li>
+                    </ul>
+                </div>
+                <div class="left">
+                    <img src="./images/tupian2.jpg"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+email
+jack@example.com
+marry@example.com
+lily@example.com
+tom@example.com
+joe@example.com

@@ -1,0 +1,24 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+rudy:x:1000:1000:rudy,,,:/home/rudy:/bin/bash
+sshd:x:121:65534::/var/run/sshd:/usr/sbin/nologin
+docker-registry:x:122:130:Docker Registry,,,:/var/lib/docker-registry:/bin/false
+mysql:x:123:131:MySQL Server,,,:/nonexistent:/bin/false
+tftp:x:124:135:tftp daemon,,,:/var/lib/tftpboot:/bin/false
+statd:x:125:65534::/var/lib/nfs:/bin/false
+redis:x:126:136::/var/lib/redis:/bin/false
+memcache:x:127:137:Memcached,,,:/nonexistent:/bin/false
+epmd:x:128:138::/var/run/epmd:/bin/false
+rabbitmq:x:129:139:RabbitMQ messaging server,,,:/var/lib/rabbitmq:/bin/false
+git:x:1001:1001::/home/git:

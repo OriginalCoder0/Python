@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>编辑</title>
+</head>
+<body>
+	<center>
+		{% include 'myapp/photos/menu.html' %}
+
+        <h3>修改照片信息</h3>
+
+        <form action="{% url 'updatephotos' %}" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{{ photo.id }}">
+            <input type="hidden" name="filename" value="{{ photo.filename }}">
+            {% csrf_token %}
+            <table width="320" border="0">
+                <tr>
+                    <td>标题：</td>
+                    <td><input type="text" name="title" value="{{ photo.title }}"></td>
+                </tr>
+                <tr>
+                    <td>备注：</td>
+                    <td><input type="text" name="comment" value="{{ photo.comment }}"></td>
+                </tr>
+                <tr>
+                    <td>图片：</td>
+                    <td><input type="file" name="img"></td>
+                </tr>
+                <tr>
+                    <td>预览：</td>
+                    <td><img src="/static/pics/s_{{ photo.filename }}" alt="{{ photo.filename }}"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="修改">
+                        <input type="reset" value="重置">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+	</center>
+
+</body>
+</html>

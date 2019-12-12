@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS样式实例</title>
+        <style type="text/css">
+            /*公共属性*/
+            div,ul,li,a,h4{margin:0px;padding:0px}
+            ul{list-style:none;}
+            a{ color:#222; text-decoration:none;}
+            a:hover{ color:#f00; text-decoration:underline;}
+            
+            .box{
+                width:265px;height:271px;
+                border:1px solid #95cd46;
+            }
+            .box .header{
+                width:100%;height:26px;
+                background:url('./images/spph_bg.gif') repeat-x 0px 0px;
+            }
+            .box .header a{
+                line-height:26px;
+                font-size:12px;
+                float:right;
+                margin-right:6px;
+            }
+            .box .header h4{
+                font-size:13px;
+                line-height:26px;
+                padding-left:6px;
+                color:green;
+            }
+            .box .content ul{
+                width:100%;
+                padding:5px;
+            }
+            .box .content ul li{
+                line-height:20px;
+                padding-left:25px;
+                background:url("./images/spph_ico.gif") no-repeat 0px 0px;
+            }
+            .box .content ul li.t1{background-position:4px 4px;}
+            .box .content ul li.t2{background-position:4px -21px;}
+            .box .content ul li.t3{background-position:4px -45px;}
+            .box .content ul li.t4{background-position:4px -68px;}
+            .box .content ul li.t5{background-position:4px -91px;}
+            .box .content ul li.t6{background-position:4px -115px;}
+            .box .content ul li.t7{background-position:4px -139px;}
+            .box .content ul li.t8{background-position:4px -163px;}
+            .box .content ul li.t9{background-position:4px -187px;}
+            .box .content ul li.t10{background-position:4px -211px;}
+            .box .content ul li a{font-size:13px;}
+            
+        </style>
+    </head>
+    <body>
+        <h3>CSS实例:商品排行盒子模型</h3> 
+        <div class="box">
+            <div class="header">
+                <a href="#">更多>></a>
+                <h4>商品排行</h4>
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="t1"><a href="#">6月周年庆促销活动正式开始啦！</a></li>
+                    <li class="t2"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                    <li class="t3"><a href="#">红六月手机家电会员回馈专场</a></li>
+                    <li class="t4"><a href="#">收纳用品春季热销 方便实用</a></li>
+                    <li class="t5"><a href="#">时尚挂表低折扣 精细准确</a></li>
+                    <li class="t6"><a href="#">24小限时达，超时即免单</a></li>
+                    <li class="t7"><a href="#">注意啦，24小时限时达活动细</a></li>
+                    <li class="t8"><a href="#">2010年度家电风云榜评选结果揭晓</a></li>
+                    <li class="t9"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                    <li class="t10"><a href="#">上海市企业客户参加以旧换新调整</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </body>
+</html>

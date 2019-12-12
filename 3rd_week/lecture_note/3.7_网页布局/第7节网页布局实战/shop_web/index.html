@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"" />
+<title>兄弟商城</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!--/*==============================container start==============================*/-->
+<div id="container">
+	<!--头部 start-->
+	<div id="header">
+    	<!--header_info start-->
+    	<div id="header_info">
+        	<div class="welcome">您好！欢迎光临兄弟商城网站！！！</div>
+            <div class="reg"><a href="#">购物车</a> | <a href="#">客服中心</a> | <a href="#">会员注册</a> | <a href="admin/admin_login.html" target="_blank">后台管理</a></div>
+            <div class="clear"></div>
+          <div id="logo"><img src="image/logo.gif" alt="logo"/></div>
+            <!--导航 start-->
+            <div id="nav">
+            	<ul>
+                	<li><a href="index.html" id="current"><span>首 页</span></a></li>
+                    <li><a href="news_list.html"><span>新闻中心</span></a></li>
+                    <li><a href="#"><span>商品分类</span></a></li>
+                    <li><a href="#"><span>最新商品</span></a></li>
+                    <li><a href="#"><span>热门商品</span></a></li>
+                    <li><a href="#"><span>打折商品</span></a></li>
+                    <li><a href="#"><span>留言本</span></a></li>
+                    <li><a href="#"><span>联系我们</span></a></li>
+                </ul>
+            </div>
+            <!--导航 end-->
+          <div class="clear"></div>
+            <!--搜索 start-->
+            <div id="search">
+            	<div class="keywords">热门关键字：手机、笔记本、ipad、ThinkPad、诺基亚N8</div>
+           	    <div>
+               	  <input type="text" name="sear" id="sear" />
+                    <input type="image" src="image/searchicon.gif" class="btn"/>
+                  <span><a href="#" class="gj_search">高级搜索</a></span>
+                  </div>
+            </div>
+            <!--搜索 end-->
+        </div>
+        <!--header_info end-->
+  </div>
+    <!--头部 end-->
+    <div class="clear"></div>
+    <div style="margin-top:7px;"></div>
+    <div class="guanggao"><img src="image/guanggao.gif" /></div>
+    <div style="margin-top:7px;"></div>
+    <!--content start-->
+    <div id="content">
+    	<!--side start-->
+		<div class="side">
+        	<!--会员登录 start-->
+        	<div class="login">
+            	<h2 class="h2_1">会员登录</h2>
+                <div class="neirong">
+                  <form method="post" action="#">
+                          <div class="frm_cont username"><label for="username">用户名：</label><input type="text" id="username"/></div>
+                          <div class="frm_cont userpws"><label for="userpsw">密　码：</label><input type="password" id="userpsw"></div>
+                    <div class="frm_cont"><input type="image" src="image/submit.gif" />&nbsp;&nbsp;<input type="image" src="image/reset.gif" /></div>
+                  </form>	
+              </div>
+            </div>
+            <!--会员登录 end-->
+            <div style="margin-top:7px;"></div>
+        	<!--购物车 start-->
+        	<div class="gwc">
+            	<h2 class="h2_1">购物车</h2>
+                <div class="neirong">
+               	  <dl>
+                    	<dd>物品数量：0</dd>
+                    <dd>共计：￥0.00</dd>
+                      <dt><a href="#" class="gwche_link">进入购物车</a></dt>
+                    </dl>
+              </div>
+            </div>
+            <!--购物车 end-->
+        </div>
+        <!--side end-->
+        <!--main start-->
+		<div class="main">
+        	<!--图片轮显 start-->
+        	<div class="lunxian">
+            	<script type="text/javascript">
+				<!--焦点图开始-->
+        <!--
+        var focus_width=468;
+        var focus_height=273;
+        var text_height=0;
+        var swf_height = focus_height+text_height;
+        var pics='image/lunxian1.jpg|image/lunxian2.jpg|image/lunxian3.jpg|image/lunxian4.jpg|image/lunxian5.jpg';
+        var links='#|#|#|#|#|#|#';
+        var texts='网上商城|网上商城|网上商城|网上商城|网上商城'; 
+        document.write('<object ID="focus_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+        document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="image/pix.swf"><param name="quality" value="high"><param name="wmode" value="transparent">');
+        document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+        document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+        document.write('<embed ID="focus_flash" src="image/pix.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); 
+		document.write('</object>');
+        //-->
+<!--焦点图结束-->
+				</script>
+            </div>
+            <!--图片轮显 end-->
+            <!--网站公告 start-->
+            <div class="side_r">
+            	<div class="gonggao">
+                    <h2 class="h2_2">网站公告</h2>
+                    <div class="more"><a href="#" class="gg_link">更多>></a></div>
+                    <div class="neirong">
+                        <ul>
+                            <li class="a"><a href="#">6月周年庆促销活动正式开始啦！</a></li>
+                            <li class="b"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                            <li class="c"><a href="#">红六月手机家电会员回馈专场</a></li>
+                            <li class="d"><a href="#">收纳用品春季热销 方便实用</a></li>
+                            <li class="e"><a href="#">时尚挂表低折扣 精细准确</a></li>
+                            <li class="f"><a href="#">24小限时达，超时即免单</a></li>
+                            <li class="g"><a href="#">注意啦，24小时限时达活动细</a></li>
+                            <li class="h"><a href="#">2010年度家电风云榜评选结果揭晓</a></li>
+                            <li class="i"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                            <li class="g"><a href="#">上海市企业客户参加以旧换新调整</a></li>
+                            <li class="k"><a href="#">清凉一夏，家纺专场59元起</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--网站公告 end-->
+            </div>
+        <!--main end-->
+        <div class="clear"></div>
+        <div style="margin-top:7px;"></div>
+        <!--商品排行 start-->
+        <div class="spph">
+            <h2 class="h2_2">商品排行</h2>
+            <div class="more"><a href="#" class="spph_link">更多>></a></div>
+            <div class="neirong">
+                        <ul>
+                            <li class="a"><a href="#">6月周年庆促销活动正式开始啦！</a></li>
+                            <li class="a"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                            <li class="c"><a href="#">红六月手机家电会员回馈专场</a></li>
+                            <li class="d"><a href="#">收纳用品春季热销 方便实用</a></li>
+                            <li class="e"><a href="#">时尚挂表低折扣 精细准确</a></li>
+                            <li class="f"><a href="#">24小限时达，超时即免单</a></li>
+                            <li class="g"><a href="#">注意啦，24小时限时达活动细</a></li>
+                            <li class="h"><a href="#">2010年度家电风云榜评选结果揭晓</a></li>
+                            <li class="i"><a href="#">享不尽的百货盛宴！快来体验吧！</a></li>
+                            <li class="j"><a href="#">上海市企业客户参加以旧换新调整</a></li>
+                            <li class="k"><a href="#">清凉一夏，家纺专场59元起</a></li>
+                        </ul>
+            </div>
+        </div>
+        <!--商品排行 start-->
+        <!--热门商品 start-->
+		<div class="rmsp">
+                <h2 class="h2_3">热门商品</h2>
+                <div class="more"><a href="#" class="rmsp_link">更多>></a></div>
+                <div class="neirong">
+                    <!--热门商品列表 start-->
+                    	<ul>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S918 摄像头" 
+                              src="image/1.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S918 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S918</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S917 摄像头" 
+                              src="image/2.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S917 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S917</A></div>
+                              <div class=p-price>市场价：<STRONG>￥79.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥79.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S916 摄像头" 
+                              src="image/3.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S916 摄像头" 
+                              href="3" target=_blank>奥尼（AONI）S916</A></div>
+                              <div class=p-price>市场价：<STRONG>￥99.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥99.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S915超强版 摄像头" 
+                              src="image/4.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S915超强版 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S915</A></div>
+                              <div class=p-price>市场价：<STRONG>￥129.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥129.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt=奥尼（AONI）S913摄像头 
+                              src="image/5.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title=奥尼（AONI）S913摄像头 
+                              href="#" 
+                              target=_blank>奥尼（AONI）S913</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                      </ul>
+                    <!--热门商品列表 end-->
+                </div>
+        </div>
+        <!--热门商品 end-->
+        <div class="clear"></div>
+        <div style="margin-top:7px;"></div>
+        <!--商品分类 start-->
+        <div class="spfl">
+            <h2 class="h2_2">商品分类</h2>
+            <div class="more"><a href="#" class="spph_link">更多>></a></div>
+            <div class="neirong">
+                <h2>---手机---</h2>
+                <span><a href="#">诺基亚</a></span> | <span><a href="#">三星</a></span> | <span><a href="#">HTC</a></span> | <span><a href="#">Apple</a></span> | <span><a href="#">多普达</a></span>
+                <h2>---笔记本---</h2>
+                <span><a href="#">联想</a></span> | <span><a href="#">惠普</a></span> | <span><a href="#">华硕</a></span> | <span><a href="#">戴尔</a></span> | <span><a href="#">宏基</a></span> | <span><a href="#">东芝</a></span>
+                <h2>---数码相机---</h2>
+                <span><a href="#">佳能</a></span> | <span><a href="#">索尼</a></span> | <span><a href="#">松下</a></span> | <span><a href="#">三星</a></span> | <span><a href="#">尼康</a></span> | <span><a href="#">富士</a></span>
+                <h2>---摄像头---</h2>
+                <span><a href="#">Logitech（罗技）</a></span> | <span><a href="#">蓝色妖姬</a></span> | <span><a href="#">Gsou（极速）</a></span> | <span><a href="#">台电</a></span> | <span><a href="#">环宇飞扬</a></span> | <span><a href="#">BNT（百脑通）</a></span>
+            </div>
+        </div>
+        <!--商品分类 start-->
+        <!--推荐商品 start-->
+		<div class="tjsp">
+                <h2 class="h2_3">推荐商品</h2>
+                <div class="more"><a href="#" class="tjsp_link">更多>></a></div>
+                <div class="neirong">
+                    	<ul>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S918 摄像头" 
+                              src="image/6.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S918 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S918</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S917 摄像头" 
+                              src="image/7.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S917 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S917</A></div>
+                              <div class=p-price>市场价：<STRONG>￥79.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥79.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S916 摄像头" 
+                              src="image/8.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S916 摄像头" 
+                              href="3" target=_blank>奥尼（AONI）S916</A></div>
+                              <div class=p-price>市场价：<STRONG>￥99.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥99.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S915超强版 摄像头" 
+                              src="image/9.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S915超强版 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S915</A></div>
+                              <div class=p-price>市场价：<STRONG>￥129.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥129.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt=奥尼（AONI）S913摄像头 
+                              src="image/10.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title=奥尼（AONI）S913摄像头 
+                              href="#" 
+                              target=_blank>奥尼（AONI）S913</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                      </ul>
+                </div>
+        </div>
+        <!--推荐商品 end-->
+        <div class="clear"></div>
+        <div style="margin-top:7px;"></div>
+        <!--网站调查 start-->
+        <div class="wzdc">
+            <h2 class="h2_2">网站调查</h2>
+            <div class="more"><a href="#"  class="spph_link">更多>></a></div>
+            <div class="neirong">
+                <FORM method=post action=#>
+                	<h2>您从何处获知本站?</h2>
+                    <div><INPUT value=0 type=radio name=item> 搜索引擎<BR></div>
+                    <div><INPUT value=1 type=radio name=item> 网络广告<BR></div>
+                    <div><INPUT value=2 type=radio name=item> 媒体报道<BR></div>
+                    <div><INPUT value=3 type=radio name=item> 报刊杂志<BR></div>
+                    <div><INPUT value=4 type=radio name=item> 朋友介绍<BR></div>
+                    <div><INPUT value=5 type=radio name=item> 我不知道<BR></div>
+                    <div><input type="image" src="image/toupiao.gif" />&nbsp;&nbsp;<input type="image" src="image/chakan.gif" /></div>
+                </FORM>
+            </div>
+        </div>
+        <!--网站调查 start-->
+        <!--打折商品 start-->
+		<div class="dzsp">
+                <h2 class="h2_3">打折商品</h2>
+                <div class="more"><a href="#" class="dzsp_link">更多>></a></div>
+                <div class="neirong">
+                    	<ul>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S918 摄像头" 
+                              src="image/11.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S918 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S918</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S917 摄像头" 
+                              src="image/12.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S917 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S917</A></div>
+                              <div class=p-price>市场价：<STRONG>￥79.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥79.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S916 摄像头" 
+                              src="image/13.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S916 摄像头" 
+                              href="3" target=_blank>奥尼（AONI）S916</A></div>
+                              <div class=p-price>市场价：<STRONG>￥99.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥99.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt="奥尼（AONI）S915超强版 摄像头" 
+                              src="image/14.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title="奥尼（AONI）S915超强版 摄像头" 
+                              href="#" target=_blank>奥尼（AONI）S915</A></div>
+                              <div class=p-price>市场价：<STRONG>￥129.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥129.00</STRONG></div>
+                              </li>
+                              <li>
+                              <div class=p-img><A href="#" 
+                              target=_blank><IMG alt=奥尼（AONI）S913摄像头 
+                              src="image/15.jpg" width=120 
+                              height=120></A></div>
+                              <div class=p-name><A title=奥尼（AONI）S913摄像头 
+                              href="#" 
+                              target=_blank>奥尼（AONI）S913</A></div>
+                              <div class=p-price>市场价：<STRONG>￥69.00</STRONG></div>
+                              <div class=p-price-huiyuan>会员价：<STRONG>￥69.00</STRONG></div>
+                              </li>
+                      </ul>
+                </div>
+        </div>
+        <!--打折商品 end-->
+        <div class="clear"></div>
+        <div style="margin-top:7px;"></div>
+        <!--促销商品 start-->
+        <div class="cxsp">
+            <h2 class="h2_2">促销商品</h2>
+            <div class="more"><a href="#" class="spph_link">更多>></a></div>
+            <div class="neirong">
+                <div class="pic"><img src="image/tupian.jpg" /></div>
+                <div class="list">
+                	<h2>大标题-促销商品</h2>
+                	<ul>
+                    	<li><span>2011-06-06</span><a href="#">简洁而新潮的实物配搭拍摄店铺</a></li>
+                        <li><span>2011-06-06</span><a href="#">ByKiky原创新锐设计限定女装店</a></li>
+                        <li><span>2011-06-06</span><a href="#">原创设计品牌---刹那优品女装</a></li>
+                        <li><span>2011-06-06</span><a href="#">金熹衣柜时尚女装细节彰显品质</a></li>
+                        <li><span>2011-06-06</span><a href="#">轻熟女风格原创设计女装店铺</a></li>
+                        <li><span>2011-06-06</span><a href="#">爱尚衣橱坚持实拍！全店2件包邮</a></li>
+                        <li><span>2011-06-06</span><a href="#">4皇冠美衣实拍 每日潮搭上新</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--促销商品 start-->
+        <!--特价商品 start-->
+        <div class="tejiasp">
+            <h2 class="h2_2">特价商品</h2>
+            <div class="more"><a href="#" class="spph_link">更多>></a></div>
+            <div class="neirong">
+                <div class="pic"><img src="image/tupian2.jpg" /></div>
+                <div class="list">
+                	<h2>大标题-特价商品</h2>
+                	<ul>
+                    	<li><span>2011-06-06</span><a href="#">简洁而新潮的实物配搭拍摄店铺</a></li>
+                        <li><span>2011-06-06</span><a href="#">ByKiky原创新锐设计限定女装店</a></li>
+                        <li><span>2011-06-06</span><a href="#">原创设计品牌---刹那优品女装</a></li>
+                        <li><span>2011-06-06</span><a href="#">金熹衣柜时尚女装细节彰显品质</a></li>
+                        <li><span>2011-06-06</span><a href="#">轻熟女风格原创设计女装店铺</a></li>
+                        <li><span>2011-06-06</span><a href="#">爱尚衣橱坚持实拍！全店2件包邮</a></li>
+                        <li><span>2011-06-06</span><a href="#">4皇冠美衣实拍 每日潮搭上新</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--特价商品 start-->
+    </div> 
+    <!--content end-->
+    <div class="clear"></div>
+    <div style="margin-top:7px;"></div>
+    <!--服务条款 start-->
+<div id=service>
+<DL class=fore1>
+  <DT><B></B><STRONG>购物指南</STRONG></DT>
+  <DD>
+  <div class=item>・<A href="#" 
+  target=_blank>购物流程</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>会员介绍</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>团购/机票/充值/点卡</A></div>
+</DD></DL>
+<DL class=fore2>
+  <DT><B></B><STRONG>配送方式</STRONG></DT>
+  <DD>
+  <div class=item>・<A href="#" 
+  target=_blank>上门自提</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>快递运输</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>特快专递（EMS）</A></div>
+</DD></DL>
+<DL class=fore3>
+  <DT><B></B><STRONG>支付方式</STRONG></DT>
+  <DD>
+  <div class=item>・<A href="#" 
+  target=_blank>货到付款</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>在线支付</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>分期付款</A></div>
+</DD></DL>
+<DL class=fore4>
+  <DT><B></B><STRONG>售后服务</STRONG></DT>
+  <DD>
+  <div class=item>・<A href="#" 
+  target=_blank>退换货政策</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>退换货流程</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>价格保护</A></div>
+</DD></DL>
+<DL class=fore5>
+  <DT><B></B><STRONG>特色服务</STRONG></DT>
+  <DD>
+  <div class=item>・<A href="#" 
+  target=_blank>夺宝岛</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>DIY装机</A></div>
+  <div class=item>・<A href="#" 
+  target=_blank>延保服务</A></div>
+</DD></DL>
+<div class=clr></div>
+</div>
+    <!--服务条款 end-->
+    <div class="clear"></div>
+    <div style="margin-top:7px;"></div>
+    <!--友情链接 start-->
+    <div id="link">
+        <h2 class="h2_2">友情链接</h2>
+        <div class="more"><a href="#" class="spph_link">更多>></a></div>
+        <div class="neirong">
+            <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">淘宝商城</a>　 <a href="#" target="_blank">当当商城</a>　 <a href="#" target="_blank">卓越商城</a>　 <a href="#" target="_blank">亚马逊商城</a>　 <a href="#" target="_blank">新浪商城</a>　 <a href="#" target="_blank">优购网</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>　 <a href="#" target="_blank">兄弟商城</a>
+        </div>
+    </div>
+    <!--友情链接 start-->
+    <div class="clear"></div>
+    <!--尾部 start-->
+    <div id="footer">
+        <ul>
+          <li><a href="#">网站首页</a></li>
+          <li><a href="#">新闻中心</a></li>
+          <li><a href="#">商品分类</a></li>
+          <li><a href="#">最新商品</a></li>
+          <li><a href="#">热门商品</a></li>
+          <li><a href="#">打折商品</a></li>
+          <li><a href="#">留言本</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    	<p> 版权所有 兄弟商城 - 邰增涛_31期 京ICP备<span style="color:#f00;">********</span>号</p>
+    </div>
+    <!--尾部 end-->
+</div>
+<!--/*==============================container end==============================*/-->
+</body>
+</html>

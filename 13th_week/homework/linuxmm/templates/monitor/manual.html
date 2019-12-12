@@ -1,0 +1,30 @@
+{% extends "monitor/base.html" %}
+{% load static from staticfiles %}
+
+{% block mytitle %}
+    教程-LinuxMM监控中心
+{% endblock %}
+
+{% block mainbody %}
+
+<ol class="breadcrumb">
+    <li><a href="{% url "index" %}">Home</a></li>
+    <li class="active">Manual</li>
+</ol>
+
+<div class="container">
+    <h3>使用说明：</h3>
+    <br>
+    <p>1. 登录系统</p>
+    <p>2. 在首页点击 “添加主机” 可添加远程监控主机</p>
+    <p>3. 在远程主机列表点击 “查看” 可查看监控详情，更新时间缺省为5秒</p>
+    <p>4. 在远程主机列表点击 “编辑” 可修改远程主机信息，如标签、IP 地址</p>
+    <p>5. 在远程主机列表点击 “删除” 可删除远程主机信息，取消监控</p>
+    <br>
+    <p>注意：远程主机需安装 Python3 以及 psutil 模块，并且需要将监控服务器的 ssh 公钥上传到受监控的远程主机！</p>
+    <p>例如：<code>ssh-copy-id root@120.78.197.79</code></p>
+</div>
+
+
+
+{% endblock %}

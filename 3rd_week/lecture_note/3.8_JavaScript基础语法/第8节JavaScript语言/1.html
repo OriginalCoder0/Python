@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript语言的基础语法</title>
+
+</head>
+<body>
+	<h2>JavaScript语言基础</h2>
+	<a href="http://www.baidu.com" title="aa" id="aid">百度</a>
+	<script type="text/javascript">
+		var a = document.getElementById("aid")
+
+		//使用HTML DOM操作a的属性
+		//a.title="百度网址"
+		//a.aa="bb";
+
+		//使用XML DOM操作a的属性
+		a.setAttribute("title","百度网站")
+		a.setAttribute("aa","bbbb")
+
+		/*
+		document.write("Hello World!<br/>");
+		var age=20;
+		document.write("Hello World!"+typeof(age)+"<br/>");
+		var name="zhangsan"
+		document.write(typeof(name));
+
+		document.write('10'+20.8)
+		*/
+	</script>
+</body>
+</html>

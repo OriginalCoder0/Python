@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+        <style>
+            div{margin:0px;padding:0px;}
+            #did{width:200px;height:200px;background-color:#ddd;cursor:move;position:absolute;}
+        </style>
+    </head>
+    <body>
+        <h3>JavaScript实例--拖动效果</h3>
+        <div id="did"></div>
+        <script type="text/javascript">
+           //获取div
+           var did = document.getElementById("did");
+           //绑定鼠标按下和抬起事件
+           did.onmousedown = function(ent){
+                //获取兼容的事件对象
+                var event = ent || window.event;
+                var x = event.clientX-this.offsetLeft;
+                var y = event.clientY-this.offsetTop;
+                
+                this.style.backgroundColor = "blue";
+                
+                //绑定移动事件事件
+                window.document.onmousemove = function(e){
+                    var myevent = e || window.event;
+                    //定位div位置
+                    did.style.top = myevent.clientY-y+"px";
+                    did.style.left = myevent.clientX-x+"px";
+                }
+           }
+           did.onmouseup = function(){
+                this.style.backgroundColor = "#ddd";
+                //取消移动事件
+                window.document.onmousemove = null;
+           }
+        </script>
+    </body>
+</html>

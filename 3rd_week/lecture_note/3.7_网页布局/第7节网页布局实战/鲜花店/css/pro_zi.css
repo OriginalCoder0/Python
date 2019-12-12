@@ -1,0 +1,12 @@
+﻿/*产品子页设置开始*/
+.pro_description{width:100%; border-bottom:1px dashed #ccc;}
+.pro_description_tu{width:328px; height:370px; float:left;}
+.pro_description_wen{width:380px; height:370px; float:left; margin-left:20px;}
+.pro_description_wen li{line-height:30px;}
+.pro_description_title{border-bottom: 1px solid #C30031; color: #C80436; font: bold 20px/38px '微软雅黑'; height:38px; text-indent:10px; margin-top:10px;}
+.pro_description_message{border:1px solid #ffd6dc; padding:10px; margin-top:10px;}
+.pro_message{width:100%;}
+.pro_message_title{height:28px; background-color:#ffd6dc; font-weight:bold; line-height:28px; text-indent:10px; color:#000;}
+.pro_message_text{padding:10px; line-height:25px;}
+
+/*产品子页设置结束*/

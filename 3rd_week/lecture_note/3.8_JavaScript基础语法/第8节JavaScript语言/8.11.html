@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>XML-DOM</title>
+        <style>
+            #did{width:400px;height:300px;border:1px solid blue;}
+            img{width:80px;border:2px solid #fff;margin:2px;}
+            img:hover{border:2px solid red;}
+        </style>
+    </head>
+    <body>
+        <h3>XML-DOM：节点的克隆</h3>
+        <div id="did"></div>
+        <div id="mid">
+            <img src="./images/11.jpg"/>
+            <img src="./images/22.jpg"/>
+            <img src="./images/33.jpg"/>
+            <img src="./images/44.jpg"/>
+        </div>
+        <h4>双击图片可实现图片的添加</h4>
+        <script type="text/javascript">
+           //获取所有图片
+           var list = document.getElementsByTagName("img");
+           //遍历并添加双击事件
+           for(var i=0;i<list.length;i++){
+                list[i].ondblclick = function(){
+                    //获取div
+                    var did  = document.getElementById("did");
+                    //将当前被双击的图片克隆一份添加到did中
+                    did.appendChild(this.cloneNode());
+                }
+           }
+        </script>
+    </body>
+</html>

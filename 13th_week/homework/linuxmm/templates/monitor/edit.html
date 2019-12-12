@@ -1,0 +1,108 @@
+{% extends "monitor/base.html" %}
+{% load static from staticfiles %}
+
+{% block mytitle %}
+    修改信息-LinuxMM监控中心
+{% endblock %}
+
+{% block mainbody %}
+
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">Home</a></li>
+        <li class="active">修改信息</li>
+    </ol>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                <h3>输入主机信息</h3><br>
+
+                <form id="add_host" action="{% url 'monitor_update' host.id %}" class="form-horizontal" method="post"
+                      onsubmit="return check()">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标签</span>
+                        <input type="text" id="tag" name="tag" class="form-control" value="{{ host.tag }}"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">地址</span>
+                        <input type="text" id="ip" name="ip" class="form-control" value="{{ host.ip }}"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">CPU</span>
+                        <input type="text" id="cpu" name="cpu" class="form-control" value="{{ host.cpu }}" aria-describedby="basic-addon1">
+                        <span class="input-group-addon">核</span>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">内存</span>
+                        <input type="text" id="mem" name="mem" class="form-control" value="{{ host.mem }}" aria-describedby="basic-addon1">
+                        <span class="input-group-addon">GB</span>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">硬盘</span>
+                        <input type="text" id="disk" name="disk" class="form-control" value="{{ host.disk }}" aria-describedby="basic-addon1">
+                        <span class="input-group-addon">GB</span>
+                    </div>
+                    <br>
+                    <div align="center">
+                        <button type="submit" class="btn btn-primary">修改</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function check() {
+            if ($("#tag").val() == '' || $("#ip").val() == '') {
+                alert("请输入标签名和IP地址！");
+                $("#tag").focus();
+                return false;
+            }
+            var exp = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
+            var reg = $("#ip").val().match(exp);
+            if (reg == null) {
+                alert("IP地址不合法，请检查！");
+                $("#ip").focus();
+                return false;
+            }
+            exp = /^[0-9]+([.]{1}[0-9]+){0,1}$/;
+            reg = $("#cpu").val().match(exp);
+            if (reg == null) {
+                alert("CPU核数输入值必须是数字类型！");
+                $("#cpu").focus();
+                return false;
+            }
+            reg = $("#mem").val().match(exp);
+            if (reg == null) {
+                alert("内存大小输入值必须是数字类型！");
+                $("#mem").focus();
+                return false;
+            }
+            reg = $("#disk").val().match(exp);
+            if (reg == null) {
+                alert("硬盘大小输入值必须是数字类型！");
+                $("#disk").focus();
+                return false;
+            }
+            return true;
+        }
+
+        $(function () {
+
+        });
+    </script>
+
+
+{% endblock %}
+

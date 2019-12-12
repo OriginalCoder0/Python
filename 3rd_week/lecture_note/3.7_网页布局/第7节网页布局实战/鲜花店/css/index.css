@@ -1,0 +1,110 @@
+
+/*===============mainA开始================*/
+.mainA{width:100%;}
+.mainA_le{width:728px; float:left;}
+/*===============幻灯片开始================*/
+.mainA_le_flash{width:728px; height:370px;;}
+.mainA_le_flash_tu{background:url(../images/flash.jpg) no-repeat; height:345px;}
+.mainA_le_flash_zi{height:25px;}
+.mainA_le_flash_zi li{float:left; width:143px; height:21px; margin-right:2px; background:url(../images/mainA_le_flash_zi_li.gif) repeat-x 0 4px; text-align:center; line-height:25px; cursor:pointer;}
+.mainA_le_flash_zi li.active,.mainA_le_flash_zi li:hover{background:url(../images/mainA_le_flash_zi_hover.png) no-repeat; width:143px; height:25px; color:#fff;}
+/*===============幻灯片结束================*/
+/*===============热销产品开始================*/
+.mainA_le_rexiao{margin-top:10px; width:100%;}
+.mainA_rexiao_title{height:33px; border-bottom:2px solid #c30031;}
+.mainA_rexiao_text{border:1px solid #ffd6dc; border-top:none; padding:5px;}
+.rexiao{width: 174px; height:299px; float: left; margin: 0 5px 25px 0;}
+.rexiao_tu{width:172px; height:227px; border:1px solid #ffd6dc;}
+.rexiao_tu:hover{border:1px solid red;}
+.rexiao_wen{height:70px; width:174px; text-align:center; line-height: 22px;}
+
+/*===============热销产品结束================*/
+/*===============mainA_ri开始================*/
+.mainA_ri{width:240px; float:right;}
+.mainA_ri_tel{border:1px solid #ffd6dc; width:239px;}
+.mainA_tel_title{background:url(../images/mainA_tel_title.gif) no-repeat; width:238px; height:31px;}
+.mainA_tel_text{padding:10px; font-size: 13px; background:url(../images/mainA_tel_text.gif) no-repeat 8px 45px;}
+.mainA_ri_news{border:1px solid #ffd6dc; width:238px; margin:10px 0;}
+.mainA_news_title{width:238px; height:30px; line-height: 30px; text-align: center;}
+
+.hidden{display:none;}
+.mainA_news_title .news_xin,.sd01{width:118px; height:30px; border-right:1px solid #ffd6dc; display:block; float:left; cursor:pointer;}
+.mainA_news_title .news_why,.sd02{width:119px; height:30px; background:#f5f5f5; display:block; float:left; cursor:pointer;}
+.mainA_news_text{padding:10px;}
+.mainA_news_text li{line-height:26px; height:26px;}
+.mainA_news_text #c01 li{height:27.5px; line-height:27.5px;}
+.mainA_news_text #c02 li{height:32px; line-height:32px;}
+.mainA_news_text li.w1{background:url(../images/why.png) no-repeat 0 0;}
+.mainA_news_text li.w2{background:url(../images/why.png) no-repeat 0 -30px;}
+.mainA_news_text li.w3{background:url(../images/why.png) no-repeat 0 -62px;}
+.mainA_news_text li.w4{background:url(../images/why.png) no-repeat 0 -93px;}
+.mainA_news_text li.w5{background:url(../images/why.png) no-repeat 0 -127px;}
+.mainA_news_text li.w6{background:url(../images/why.png) no-repeat 0 -160px;}
+.mainA_news_text #c02 a{padding-left:45px;}
+.mainA_ri_fenlei{border:1px solid #ffd6dc; width:238px;}
+.mainA_fenlei_title{height:22px; border-bottom:1px solid #ffd6dc; background-color:#f6ecf7; color:#af406a; line-height:22px; text-indent:10px; font-weight:bold;}
+.mainA_fenlei_text{padding:8px;}
+.mainA_fenlei_text h4{border-bottom:1px dashed #999999;}
+.mainA_fenlei_text ul{height:72px; line-height:22px;}
+.mainA_fenlei_text li{float:left; width:55px;}
+.mainA_ri_songhua{border:1px solid #ffd6dc; margin-top:10px;}
+/*===============mainA_ri结束================*/
+/*===============mainA结束================*/
+/*===============新品上市开始================*/
+.xinpin{margin-top:10px; width:100%;}
+
+.xinpin_text{padding:10px; border:1px solid #ffd6dc; border-top:none;}
+.xinpin_text_le{background:url(../images/xinpin.jpg) no-repeat 0 top; width:195px; height:550px; float:left;}
+.xinpin_text_ri{width:750px; float:right;}
+.xinpin_xun{width: 177px; height:299px; float: left; margin: 0 10px 8px 0;}
+.xinpin_tu{width:175px; height:228px; border:1px solid #ffd6dc;}
+.xinpin_tu:hover{border:1px solid red;}
+.xinpin_wen{height:70px; width:177px; text-align:center; line-height:22px;}
+/*===============新品上市结束================*/
+/*===============特惠推荐开始================*/
+.tehui{margin-top:10px; width:100%;}
+.tehui_text_le{background:url(../images/tehui.jpg) no-repeat 0 top; width:195px; height:550px; float:right;}
+.tehui_text_ri{width:750px; float:left;}
+/*===============特惠推荐结束================*/
+/*===============浪漫组合开始================*/
+.langman{margin-top:10px; width:100%;}
+.langman_text_le{background:url(../images/langman.jpg) no-repeat 0 top; width:195px; height:550px; float:left;}
+/*===============浪漫组合结束================*/
+/*===============卡通开始================*/
+.katong{width:100%; margin-top:10px;}
+.katong_huasu{width:485px; float:left;}
+.katong_huasu_title{height:38px; border-bottom:2px solid #C30031;}
+.katong_huasu_text{border:1px solid #ffd6dc; width:483px;}
+.huasu_text_top{width:483px; height:170px;}
+.huasu_text_bottom{padding:8px;}
+.huasu_bottom{width:115px; margin-right:1px; float:left;}
+.huasu_bottom_tu{width:98px; height:130px; border:1px solid #ffd6dc;}
+.huasu_bottom_tu:hover{border:1px solid red;}
+.huasu_bottom_wen{text-align:center; line-height:18px; padding-top:5px;}
+.katong_huahe{width:485px; float:right;}
+/*===============卡通结束================*/
+/*===============巧克力开始================*/
+.qiaokeli{width:100%; margin-top:10px;}
+/*===============巧克力结束================*/
+/*===============评论开始================*/
+.pinglun{width:100%; margin-top:10px;}
+.pinglun_remen{width:746px; border:1px solid #ffd6dc; float:left;}
+.pinglun_remen_title{height:22px;background-color:#f6ecf7; border-bottom:1px solid #ffd6dc; color:#AF406A; line-height: 22px; text-indent:10px;}
+.pinglun_remen_text{padding:8px;}
+.ping_xun{width:235px; height:62px; margin:0 8px 10px 0; float:left;}
+.ping_xun_tu{width:60px; height:60px; border:1px solid #ffd6dc; float:left;}
+.ping_xun_tu:hover{border:1px solid red;}
+.ping_xun_wen{width:170px; height:62px; float:right; line-height:18px;}
+.pinglun_zhuanti{width:220px; border:1px solid #ffd6dc; float:right; padding-bottom:25px;}
+.pinglun_zhuanti_text{padding:6px;}
+.pinglun_zhuanti_text li{float:left; width:103px; line-height:24px; }
+/*===============评论结束================*/
+/*===============文章列表开始================*/
+.know{width:100%; margin-top:10px;}
+.know_zhufu{width:315px; border:1px solid #ffd6dc; float:left; margin-right:15px;}
+.pinglun_remen_title h4.le{float:left;}
+.know_zhufu_text{padding:10px; line-height:25px;}
+.know_zhishi{width:315px; border:1px solid #ffd6dc; float:left;}
+.know_xingzuo{width:315px; border:1px solid #ffd6dc; float:right;}
+/*===============文章列表结束================*/
+/*===============主体结束================*/

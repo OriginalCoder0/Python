@@ -1,0 +1,31 @@
+@charset "gb2312";
+/* CSS Document */
+/* ------------------------------------------------------------
+   版本: XHTML 1.0
+   作者: 邰增涛
+     QQ: 494762513
+  Email: taizengtao@163.com
+------------------------------------------------------------ */
+/*==============================公共部分开始==============================*/
+*{ margin:0; padding:0;}/*css 重置*/
+body{font:normal 12px/1.5 "宋体",Verdana, Geneva, sans-serif; color:#000; background:#a2d962 url(../image/login_02.gif) repeat-x; 	overflow:hidden;}
+ul{ list-style:none;}
+img{ border:0 none;}
+.clear{ clear:both;}
+a{ color:#000; text-decoration:none;}
+a:hover{ color:#f00; text-decoration:underline;}
+/*==============================公共部分结束==============================*/
+
+
+/*==============================主体内容开始==============================*/
+
+
+#container{ width:862px; margin:0 auto; height:608px;}
+#container .main .side_left{ float:left;}
+#container .main .side_main{ float:left; background:url(../image/login_06.gif) no-repeat; width:209px; height:152px;}
+#container .main .side_main .usr{ margin-top:20px;}
+#container .main .side_main .usr,#container .main .side_main .pwd,#container .main .side_main .vali,#container .main .side_main .queren{ width:180px; margin-left:20px; color:#4b8303; font-size:12px;}
+#container .main .side_main .queren{ text-align:center; margin-top:5px;}
+#container .main .side_main .usr input,#container .main .side_main .pwd input,#container .main .side_main .vali input{ width:120px; height:18px;  margin-bottom:7px; border:1px solid #cadcb2;}
+#container .main .side_main .vali input{ width:50px;}
+#container .main .side_right{ float:left; width:120px;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+               //获取所有的li节点并添加点击事件
+               $("#did .header ul li").click(function(){
+                    //获取点击的是第几个li节点
+                    var m = $(this).index();
+                    //隐藏所有选项卡
+                    $("#did .body div").hide();
+                    //显示当前的
+                    $("#did .body div").eq(m).fadeIn("slow");
+               });
+            });
+        </script>
+        <style type="text/css">
+            ul,li,div{margin:0px;padding:0px;}
+            #did .header ul{list-style:none;}
+            #did .header ul li{line-height:50px;width:120px;float:left;margin-right:4px;background-color:#ddd;}
+            #did .header ul li:hover{background-color:#fc0;}
+            #did .body{clear:both;width:500px;height:400px;border:1px solid #ddd;}
+            #did .body .cc{display:none;height:400px;}
+            #did .header ul li.b1,#did .body div.d1{background-color:red;}
+            #did .header ul li.b2,#did .body div.d2{background-color:green;}
+            #did .header ul li.b3,#did .body div.d3{background-color:blue;}
+        </style>
+    </head>
+    <body>
+        <h3 id="hid">jQuery实例--选项卡</h3>
+        <div id="did">
+            <div class="header">
+                <ul>
+                    <li class="b1">aaa</li>
+                    <li class="b2">bbb</li>
+                    <li class="b3">ccc</li>
+                    <li >dddd</li>
+                </ul>
+            </div>
+            <div class="body">
+                <div class="cc d1">AAA</div>
+                <div class="cc d2">BBB</div>
+                <div class="cc d3">CCC</div>
+                <div class="cc">DDDDDD</div>
+            </div>
+        </div>
+    </body>
+</html>

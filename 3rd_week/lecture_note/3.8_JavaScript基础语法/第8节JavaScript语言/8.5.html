@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+    </head>
+    <body>
+        <h3>JavaScript实例--内置对象--正则验证</h3>
+        <form name="myform" onsubmit="return doCheck()" action="8.html" method="post">
+            账号：<input type="text" name="uname"/> 8-12位的字母数字和下划线<br/><br/>
+            密码：<input type="password" name="upass"/> 8~16位<br/><br/>
+            邮箱：<input type="text" name="email"/><br/><br/>
+            年龄：<input type="text" name="age"/><br/><br/>
+            <input type="submit" value="提交"/>
+        </form>
+        <script type="text/javascript">
+           function doCheck(){
+                //验证账号
+                var uname = document.myform.uname.value;
+                //if(uname.length<8 || uname.length>12){
+                //    alert("账号长度必须是8~12位");
+                //    return false;
+                //}
+                if(uname.match(/^[a-zA-Z0-9_]{8,12}$/)==null){
+                    alert("账号长度必须是8~12位字母数字或下划线");
+                    return false;
+                }
+
+
+                //验证密码
+                var upass = document.myform.upass.value;
+                if(upass.match(/^.{8,16}$/)==null){
+                    alert("密码长度必须是8~16位");
+                    return false;
+                }
+
+
+                return true;
+           }
+        </script>
+    </body>
+</html>

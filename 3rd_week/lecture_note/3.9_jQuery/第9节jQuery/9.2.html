@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+               //获取按钮并添加点解事件
+               $("button").click(function(){
+                    //获取所有li节点
+                    //$("li").css("color","red");
+                    //获取li节点并遍历
+                    $("li").each(function(){
+                        $(this).html($(this).html()*2);
+                    });
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <h3 id="hid">jQuery实例--节点遍历</h3>
+        <ul>
+            <li>2</li>
+            <li>1</li>
+            <li>10</li>
+            <li>18</li>
+            <li>8</li>
+           
+        </ul>
+        <button>乘以2</button>
+    </body>
+</html>

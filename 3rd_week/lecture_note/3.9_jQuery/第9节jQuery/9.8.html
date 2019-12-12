@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <style>
+            div,img,ul,li{margin:0px;padding:0px;}
+            #did{width:300px;height:300px;overflow:hidden;display:none;position:absolute;}
+            
+        </style>
+    </head>
+    <body>
+        <h3>JavaScript实例--图片的放大镜效果</h3>
+        <br/><br/><br/>
+        <img id="mid" src="./images/44.jpg" width="384" height="240"/>
+        <div id="did">
+            <img src="./images/44.jpg"/>
+        </div>
+        <script type="text/javascript">
+          //获取mid层并绑定鼠标移入和移出事件及移动事件
+          $("#mid").mouseover(function(){ //移入
+              //获取当前图层节点的偏移位置
+              var offset = $(this).offset();
+              //计算放大图层的位置
+              var x = offset.left+$(this).width()+5;
+              var y = offset.top;
+              $("#did").css({top:y+"px",left:x+"px"}).show();
+          }).mouseout(function(){ //移出
+              $("#did").hide();
+          }).mousemove(function(e){ //移动
+              //获取当前图层节点的偏移位置
+              var offset = $(this).offset();
+              //计算出鼠标在图层上的定位
+              var x = e.pageX-offset.left;
+              var y = e.pageY-offset.top;
+              //设置放大图层的滚动图层位置
+              $("#did").scrollTop(y*5-150).scrollLeft(x*5-150);
+          });
+        </script>
+    </body>
+</html>

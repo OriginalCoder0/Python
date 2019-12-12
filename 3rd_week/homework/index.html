@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>东哥的包子铺</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body, h1, h2, h3, h4, h5, h6, img, ul, ol, li, div, p {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            padding-top: 70px;
+        }
+        .blog-footer {
+            text-align: center;
+        }
+        #nav_logo {
+            height: 32px;
+        }
+        #myCarousel .carousel-inner img {
+            margin: 0 auto;
+        }
+        .container{
+            margin-top: 60px;
+        }
+        .container .box img{
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        @media (min-width: 992px) {
+            .container{
+                width: 940px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .container{
+                width: 1170px;
+            }
+        }
+        @media (min-width: 1700px) {
+            .container{
+                width: 1470px;
+            }
+        }
+        .box {
+            height: 280px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .box:hover {
+            border: 1px dashed gray;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- <a class="navbar-brand" href="#">东哥的包子铺</a> -->
+                <a class="navbar-brand" href="#">
+                    <img id="nav_logo" src="assets/images/logo_patty_770x195.png">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li class="active"><a href="main.html">招牌<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">所有包子</a></li>
+                    <li><a href="#">招商加盟</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="">
+                            <img src="assets/images/shoping.png" width="20px" height="18px"><span id="badge" class="badge">6</span>
+                        </a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 海报 -->
+    <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="assets/images/banner_01.jpg" alt="1">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <img src="assets/images/banner_02.jpg" alt="1">
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <img src="assets/images/banner_03.jpg" alt="1">
+                <div class="carousel-caption"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品列表 -->
+    <div id="product_list" class="container">
+        <div class="row">
+            <div class="box col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/紫薯素包子.jpg" alt="">
+                    <p><strong>紫薯素包子</strong></p>
+                </header>
+                <p>紫薯和面做出来的包子纯天然，颜值高，搭配胡萝卜木耳等做馅料，营养丰富无负担，适合现代人健康的饮食理念。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/花生酱大花卷.jpg" alt="">
+                    <p><strong>花生酱大花卷</strong></p>
+                </header>
+                <p>花卷是热爱面食的同学无法抵挡的香软诱惑，普普通通的面片，一层油、一层盐、一层葱花或者火腿片，淡而地味的面团立刻变身大受追捧的花样面点。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/南瓜馒头.jpg" alt="">
+                    <p><strong>南瓜馒头</strong></p>
+                </header>
+                <p>秋天是最适合吃南瓜的季节，此时南瓜大量上市，南瓜富含维生素A、维生素E、最能缓解秋天气候的干燥，还能起到增强机体免疫力的功效。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/大虾蛋饼.jpg" alt="">
+                    <p><strong>大虾蛋饼</strong></p>
+                </header>
+                <p>鸡蛋含有大量的维生素和矿物质以及高生物价值的蛋白质，大虾中含有丰富的镁，对心脏活动具有重要调节作用，有利于保护心血系统。同时加入新鲜的西兰花、土豆和胡萝卜，吃起来非常过瘾。</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/薄皮韭菜饼.jpg" alt="">
+                    <p><strong>薄皮韭菜饼</strong></p>
+                </header>
+                <p>薄皮香酥韭菜饼，外焦里嫩，外层酥脆，内层软糯筋道。<br>Tips：吃完切记要检查牙齿，看看有没有挂着韭菜花。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/烤年糕.jpg" alt="">
+                    <p><strong>烤年糕</strong></p>
+                </header>
+                <p>年糕用热水煮两分钟，变软后捞出过冷水，然后在其表面切几刀，刷上一层油，撒上辣椒粉、孜然粉、盐等，再刷一层油，烤20分钟。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/刀切馒头.jpg" alt="">
+                    <p><strong>刀切馒头</strong></p>
+                </header>
+                <p>最简单家常的一款馒头。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/糖三角.jpg" alt="">
+                    <p><strong>糖三角</strong></p>
+                </header>
+                <p>虽然糖三角没有西式点心亮丽的外表，但它无油无添加剂，健康之余也很适合老百姓的口味，可以当做主食，也可以当做早餐。</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/牛肉馅饼.jpg" alt="">
+                    <p><strong>牛肉馅饼</strong></p>
+                </header>
+                <p>牛肉馅饼口感一点也不干，皮薄馅多，吃起来有酥皮的感觉，香香的。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/云南破酥包子.jpg" alt="">
+                    <p><strong>云南破酥包子</strong></p>
+                </header>
+                <p>破酥包子是云南昆明的传统风味小吃，由低筋面粉、熟猪油、熟云腿、蜂肉丁、冬菇末等制成，富含蛋白质、碳水化合物、维生素，老少皆宜。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/青椒腐竹包子.jpg" alt="">
+                    <p><strong>青椒腐竹包子</strong></p>
+                </header>
+                <p>腐竹入馅很好吃，青椒有提味的作用，喜欢吃素包子的您一定不要错过哟。</p>
+            </div>
+            <div class="box col-lg-2 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+                <header>
+                    <img src="assets/images/patty/鸡蛋米老头.jpg" alt="">
+                    <p><strong>鸡蛋米老头</strong></p>
+                </header>
+                <p>这款鸡蛋米老头，是用家家户户都非常常见的米饭和鸡蛋做出来的，口感松脆，咬上一口让人忍不住想咬第二口。</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer class="blog-footer">
+        <p>&copy; 2017-2018 东哥包子股份有限公司</p>
+        <p><a href="#">Back to top</a></p>
+    </footer>
+
+    <script>
+        $(function(){
+            $('.carousel').carousel({
+                interval: 2714,
+                wrap: true
+            });
+        })
+    </script>
+
+</body>
+</html>

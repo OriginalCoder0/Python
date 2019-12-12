@@ -1,0 +1,18 @@
+/*注册样式开始*/
+#mainA{padding:10px; border:1px solid #CECFC7;}
+.zhuce_title{background:url(../images/reg_title.gif) no-repeat left 50%; height:35px;}
+.zhuce_text tr{height:30px; line-height:30px;}
+.zhuce_text{padding-top:50px;}
+/*注册样式结束*/
+
+/*登陆样式开始*/
+#main{width:100%;}
+.denglu{width:465px; float:left;}
+.denglu_title{width:465px; height:35px; background:url(../images/deng.jpg) no-repeat;}
+.denglu_text{border:1px solid #DCDCDC; border-top:none; padding:30px;}
+.denglu_text tr{height: 30px; line-height:30px;}
+.zhu{width:465px; float:right;}
+.zhu_title{width:465px; height:35px; background:url(../images/zhu.jpg) no-repeat;}
+.zhu_text{border:1px solid #DCDCDC; border-top:none; padding:30px;}
+.zhu_text ul{padding-left: 100px; line-height:24.5px;}
+/*登陆样式结束*/

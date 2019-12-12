@@ -1,0 +1,18 @@
+/*侧边栏设置开始*/
+.sidebar{width:207px; float:left;}
+.sidebar_kefu{background:url(../images/sidebar_kefu.jpg) no-repeat; width:207px; height:229px;}
+.sidebar_category{margin:5px 0; width:100%;}
+.sidebar_category_title{height:28px; background-color:#cc0033; color:#fff; text-indent:10px; line-height:28px;}
+.sidebar_category_text{padding:10px; border:1px solid #ffd6dc;}
+.sidebar_category_text h4{border-bottom:1px dashed #999999;}
+.sidebar_category_text ul{height:72px; line-height:22px;}
+.sidebar_category_text li{float:left; width:45px; text-align:center;}
+.sidebar_category_text li.jia{float:left; width:55px; text-align:center;}
+.sidebar_jilu{width:100%;}
+.sidebar_jilu_title{height:28px; background-color:#f0f0f0; font-weight:bold; line-height:28px; text-indent:10px;}
+.sidebar_jilu_text{padding:15px 0 0 20px; border:1px solid #f0f0f0; border-top:none;}
+.sidebar_jilu_xun{width:72px; height:95px; float:left; margin:0 20px 10px 0;}
+.jilu_xun_tu{border:1px solid #ccc; width:70px; height:70px;}
+.jilu_xun_tu:hover{border:1px solid red;}
+.jilu_xun_title{width:100%; height:25px; line-height:25px; font-size: 14px; text-align:center;}
+/*侧边栏设置结束*/

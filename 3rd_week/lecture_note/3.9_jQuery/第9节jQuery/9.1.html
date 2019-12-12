@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <script type="text/javascript">
+           function doFun(){
+                var list = $("input[type='checkbox']:checked");
+                alert(list.length);
+                $("li:has(input:checked)").css("color","red");
+           }
+        </script>
+    </head>
+    <body>
+        <h3 id="hid">jQuery实例--子元素选择器</h3>
+        <ul>
+            <li><input type="checkbox" name="likes[]" value="1"/> aaaaaaa</li>
+            <li><input type="checkbox" name="likes[]" value="2"/> bbbbbbb</li>
+            <li><input type="checkbox" name="likes[]" value="3"/> ccccccc</li>
+            <li><input type="checkbox" name="likes[]" value="4"/> ddddddd</li>
+            <li><input type="checkbox" name="likes[]" value="5"/> eeeeeee</li>
+        </ul>
+       <button onclick="doFun()">获取</button>
+    </body>
+</html>

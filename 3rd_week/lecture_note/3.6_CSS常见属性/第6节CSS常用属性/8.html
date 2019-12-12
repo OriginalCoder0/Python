@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS样式实例</title>
+        <style type="text/css">
+            div.aa{
+                width:800px;height:1000px;
+                background-color:#ddd;
+                position: relative;
+            }
+            div.bb{
+                width:200px;height:200px;
+                background-color:#fc0;
+                position: absolute;
+                top:40px;
+                left:20px;
+            }
+            
+            #mm{
+                position: absolute; /*绝对定位*/
+                top:30px;
+                right:830px;
+                z-index: 99999;
+            }
+            #mid{
+                position: fixed; /*固定定位*/
+                top:100px;
+                right:-70px;
+                transition:right 0.3s ease-out;
+            }
+            #mid:hover{
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>CSS实例:定位position属性</h3> 
+        <br/><br/>
+        <div class="aa">
+            <div class="bb"></div>
+        </div>
+        <img id="mid" src="./images/mistakertu.gif"/>
+        <img id="mm" src="./images/1.gif"/>
+       
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>添加</title>
+</head>
+<body>
+	<center>
+		{% include 'myapp/photos/menu.html' %}
+
+        <h3>添加相册信息</h3>
+        <form action="{% url 'insertphotos' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table width="320" border="0" align="center">
+                <tr>
+                    <td>标题：</td>
+                    <td><input type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td>图片：</td>
+                    <td><input type="file" name="img"></td>
+                </tr>
+                <tr>
+                    <td>备注：</td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="上传">
+                        <input type="reset" value="重置">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+       
+    </head>
+    <body>
+        <h3>JavaScript实例--Ajax效果</h3>
+        <button>加载</button><br/><br/>
+        <div id="did" style="width:200px;height:200px;border:1px solid blue;"></div>
+        <script type="text/javascript">
+            //获取按钮添加点击事件
+            $("button").click(function(){
+                //1. 第一种：load（）的ajax处理
+                //$("#did").load("5.php");
+                
+                //2. 第二种：$.get() 的ajax处理
+                //$.get("5.php",{name:"lisi",age:20},function(data){
+                //   $("#did").html(data);
+                //});
+                
+                //3. 第三种：$.post() 的ajax处理
+                //$.post("5.php",{name:"lisi",age:20},function(data){
+                //    $("#did").html(data);
+                //});
+                
+                //4. 第四种：$.ajax() 的处理
+                $.ajax({
+                   type:"POST",      //请求方式
+                    url:"5.php",    //请求地址
+                  async:true,       //是否异步
+                   data:{name:"wangwu",age:22}, //请求参数
+               dataType:"text",     //响应回来的数据格式
+                success:function(res){ //成功回调函数
+                            $("#did").html(res); 
+                        },
+                  error:function(){ //失败的回调函数
+                            alert("Ajax加载失败！");
+                        }
+                });
+                
+            });
+        </script>
+    </body>
+</html>

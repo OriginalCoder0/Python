@@ -1,0 +1,99 @@
+{% extends 'web/login_base.html' %}
+{% load static from staticfiles %}
+
+{% block mytitle %}
+    Flyme 账号 - 注册
+{% endblock %}
+
+{% block mainform %}
+    <div id="content" class="content">
+        <div class="container-fluid">
+            <div class="banner-box hidden-xs hidden-sm">
+                <div class="container">
+                    <form id="mainForm" name="mainForm" action="{% url 'web_users_insert' %}" method="post" class="main-form">
+                        {% csrf_token %}
+                        <div class="tab-title">
+                            <a class="linkAGray" id="toAccountLogin" href="javascript:void(0);">注册账号</a>
+                        </div>
+                        <br/>
+                        {% if info %}
+                            <div class="tip-box">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                                    <span class="tip-font">{{ info }}</span>
+                                    <span aria-hidden="true" class="cha">&times;</span>
+                                </button>
+                            </div>
+                        {% endif %}
+                        <div class="normalInput cycode-box fieldInput" id="cycode-box">
+                            <div class="cycode-selectbox">
+                                <input class="ipt-account inp-focus" name="username" id="account" maxlength="50" placeholder="用户名" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="normalInput cycode-box fieldInput" id="cycode-box">
+                            <div class="cycode-selectbox">
+                                <input class="ipt-account inp-focus" name="name" id="account" maxlength="50" placeholder="真实姓名" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="normalInput cycode-box fieldInput" id="cycode-box">
+                            <div class="cycode-selectbox">
+                                <input class="ipt-account inp-focus" name="phone" id="account" maxlength="50" placeholder="手机号码" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="normalInput fieldInput passwd-box">
+                            <input class="inp-focus" name="password" id="password" maxlength="16" autocomplete="off" placeholder="输入密码" type="password"/>
+                        </div>
+                        <div class="normalInput fieldInput passwd-box">
+                            <input class="inp-focus" name="repassword" id="password" maxlength="16" autocomplete="off" placeholder="再输一次密码" type="password"/>
+                        </div>
+                        {% comment %}
+                        <div class="normalInput fieldInput passwd-box">
+                            <input class="inp-focus" name="code" style="width:100px;" maxlength="16" placeholder="验证码" autocomplete="off" type="text"/>
+                            <img src="{% url 'web_verify' %}?id=1" onclick="this.src='{% url 'web_verify' %}?sn='+Math.random()"/>
+                        </div>
+                        {% endcomment %}
+
+                        <a id="register" href="javascript:document.mainForm.submit();" class="fullBtnBlue">注册</a>
+                        <div class="transferField">
+                            <a class="go2forgetpwd linkABlue rememberFieldForA" href="#">注册不成功?</a>
+                            <a class="go2register linkABlue" href="{% url 'login' %}" id="toRegister">登录</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- 移动端结构 -->
+            <form id="mainForm" class="main-form app-main-form">
+                <div class="tab-title">
+                    <a class="linkAGray" id="toAccountLogin" href="javascript:void(0);">账号登录</a>
+                </div>
+                <div class="tip-box visiblility-hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <i class="glyphicon glyphicon-exclamation-sign"></i>
+                        <span class="tip-font"></span>
+                        <span aria-hidden="true" class="cha">&times;</span>
+                    </button>
+                </div>
+                <div class="normalInput cycode-box show-cycode" id="cycode-box">
+                    <div class="cycode-selectbox">
+                        <input id="phone" name="phone" class="ipt-phone inp-focus" maxlength="11" placeholder="手机号码"
+                               autocomplete="off">
+                    </div>
+                </div>
+                <div class="normalInput box-input">
+                    <input class="pswInput inp-focus" name="kapkey" id="kapkey" maxlength="6" placeholder="密码"
+                           autocomplete="off" tabindex="3" type="text">
+                </div>
+
+                <a id="register" class="fullBtnBlue">登录</a>
+                <div class="transferField">
+                    <a class="go2forgetpwd linkABlue rememberFieldForA" href="#">忘记密码?</a>
+                    <a class="go2register linkABlue" href="./register.html" id="toRegister">注册</a>
+                </div>
+            </form>
+            <!-- 移动端结构 E-->
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>XML DOM实例</title>
+        <style>
+            select,option,div,button{margin:0px;padding:0px;}
+            #lid,#rid,div{
+                width:80px;
+                height:260px;
+                float:left;
+            }
+            div{
+                text-align:center;
+                padding-top:60px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- html注释 -->
+        <h2>XML DOM实例:XML DOM 中table</h2>
+        <table id="tid" width="500" border="1">
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>20</td>
+                    <td><button onclick="dodel(this)">删除</button></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>李四</td>
+                    <td>女</td>
+                    <td>21</td>
+                    <td><button onclick="dodel(this)">删除</button></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>王五</td>
+                    <td>男</td>
+                    <td>22</td>
+                    <td><button onclick="dodel(this)">删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br/><br/><br/>
+        <h2>添加学生信息</h2>
+        <form action="#" name="myform" onsubmit="return doAdd()">
+            学号：<input type="text" name="sno"/><br/><br/>
+            姓名：<input type="text" name="name"/><br/><br/>
+            性别：<input type="text" name="sex"/><br/><br/>
+            年龄：<input type="text" name="age"/><br/><br/>
+            <input type="submit" value="添加"/>
+        </form>
+        <script type="text/javascript">
+            //执行删除的方法
+            function dodel(bt){
+                //获取表格节点
+                bt.parentNode.parentNode.parentNode.removeChild(bt.parentNode.parentNode);
+            }
+            
+            //执行添加
+            function doAdd(){
+                //获取表单信息
+                var data = new Array();
+                data[0] = document.myform.sno.value;
+                data[1] = document.myform.name.value;
+                data[2] = document.myform.sex.value;
+                data[3] = document.myform.age.value;
+                
+                //获取表格并申请添加一行
+                var tbody = document.getElementById("tid").getElementsByTagName("tbody")[0];
+                //遍历数据并添加
+                var tr = document.createElement("tr");
+                for(var i=0;i<data.length;i++){
+                    var td = document.createElement("td");
+                    var text = document.createTextNode(data[i]);
+                    td.appendChild(text);
+                    tr.appendChild(td);
+                }
+                var td = document.createElement("td");
+                td.innerHTML = '<button onclick="dodel(this)">删除</button>';
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+                
+                //当前表单清空
+                document.myform.reset();
+                
+                return false;
+            }
+        </script>
+    </body>
+</html>

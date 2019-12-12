@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS样式：响应式布局</title>
+        <style type="text/css">
+            /*公共属性*/
+            div,ul,li{margin:0px;padding:0px;}
+            ul{list-style:none;}
+            
+            ul li{width:180px;height:240px;float:left;background-color:#ddd;margin:5px;}
+           /*当前屏幕宽度0~400时采用此样式*/
+           @media all and (min-width:0px) and (max-width:500px){
+                h3{color:blue;}
+                 div{width:400px;}
+                div ul li{background-color:#fc0;}
+           }
+            /*当前屏幕宽度401~800时采用此样式*/
+           @media all and (min-width:501px) and (max-width:800px){
+                h3{color:red;}
+                div{width:800px;}
+                div ul li{background-color:#f0c;}
+           }
+            /*当前屏幕宽度801~1400时采用此样式*/
+           @media all and (min-width:801px) and (max-width:1400px){
+                h3{color:green;}
+                div{width:1210px;}
+                div ul li{background-color:#ddd;}
+           }
+        </style>
+    </head>
+    <body>
+        <h3>CSS实例:响应式布局（媒体查询属性）</h3> 
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*ul li{color:red;}*/
+
+		/*ul>li{color:red;}*/
+
+		/*ul+li{color:red;} /*后面的兄弟标签一个，要求紧邻*/
+		/*ul~li{color:red;} /*后面的所有兄弟标签*/
+
+		a[class^="ab"]{color:red;}
+
+		ul li:first-child{background-color:#ddd}
+	</style>
+</head>
+<body>
+
+	<h1 class="cc" id="hid">CSS样式表实例--选择器的类型</h1>
+	
+	<ul>
+		<li>看书</li>
+		<li>上网</li>
+		<li>爬山</li>
+		<li>唱歌</li>
+		<ol type="a">
+			<li>aaaaa</li>
+			<li>lllll</li>
+		</ol>
+	</ul>
+	<li>bbbbbbbbbbbbbbbbb</li>
+	<li>bbbbbbbbbbbbbbbbb</li>
+	<li>bbbbbbbbbbbbbbbbb</li>
+
+	<ul>
+		<li><a href="?" class="abc">外部链接</a></li>
+		<li><a href="?">内部链接</a></li>
+		<li><a href="?" class="abd">外部链接</a></li>
+		<li><a href="?">内部链接</a></li>
+	</ul>
+
+</body>
+</html>

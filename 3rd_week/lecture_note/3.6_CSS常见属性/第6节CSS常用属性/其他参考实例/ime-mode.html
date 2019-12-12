@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>ime-mode_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+<meta name="copyright" content="www.doyoe.com" />
+<style>
+#test{
+	padding:50px;
+	font:14px/1.231 georgia,宋体,arial,verdana,helvetica,sans-serif;
+}
+#test fieldset{
+	margin:0;
+	padding:10px;
+	border-radius:5px;
+}
+#test fieldset legend{
+	padding:3px 6px;
+	border-radius:3px;
+	background:#ddd;
+}
+#test ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#test li{
+	padding:5px 10px;
+}
+#test .writebox{
+	position:relative;
+	overflow:visible;
+	outline:none;
+	width:200px;
+	padding:4px 3px 5px;
+    border:1px solid #999;
+    border-radius:3px;
+    box-shadow:1px 1px 2px rgba(0,0,0,.2) inset;
+    background-color:#FFFFFF;
+	color:#666666;
+	font:14px/1.231 georgia,宋体,arial,verdana,helvetica,sans-serif;
+}
+#test .writebox:hover{
+	border-color:#777;
+	box-shadow:1px 1px 2px rgba(0,0,0,.4) inset;
+}
+#test .writebox:focus{
+	border-color:#666;
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+}
+.auto{
+	ime-mode:auto;
+}
+.normal{
+	ime-mode:normal;
+}
+.active{
+	ime-mode:active;
+}
+.inactive{
+	ime-mode:inactive;
+}
+.disabled{
+	ime-mode:disabled;
+}
+.title{
+	font:bold 16px/1.5 georgia,simsun,sans-serif;
+}
+</style>
+</head>
+<body>
+<h1 class="title">在下列输入框输入试试每个值的作用：</h1>
+<form id="test" action="#" method="post">
+	<fieldset>
+		<legend>简单的表单</legend>
+		<ul>
+			<li><label>auto：<input type="text" class="writebox auto" /></label></li>
+			<li><label>normal：<input type="text" class="writebox normal" /></label></li>
+			<li><label>active：<input type="text" class="writebox active" /></label></li>
+			<li><label>inactive：<input type="text" class="writebox inactive" /></label></li>
+			<li><label>disabled：<input type="text" class="writebox disabled" /></label></li>
+		</ul>
+	</fieldset>
+</form>
+</body>
+</html>
+			

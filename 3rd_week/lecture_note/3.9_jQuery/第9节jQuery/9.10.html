@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript--实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <style>
+            div,ul,li,a{margin:0px;padding:0px;}
+            ul{list-style:none; position:absolute;}
+            a{text-decoration:none;display:block;width:100px;line-height:40px;}
+            a:hover{background-color:#fc0;}
+            #menu{width:100%;height:40px;line-height:40px;}
+            #menu ul li{width:100px;float:left;
+                        line-height:40px;
+                        background-color:#ddd;
+                        text-align:center;
+                        border-right:2px solid #fff;}
+            #menu ul li ul.item li{border-top:2px solid #fff;}
+            #menu ul li ul.item{display:none;position:relative;}
+        </style>
+    </head>
+    <body>
+        <h3>JavaScript实例--导航栏效果</h3>
+        <div id="menu">
+            <ul>
+                <li><a href="#">商品展示</a>
+                    <ul class="item">
+                        <li><a href="#">热卖商品</a></li>
+                        <li><a href="#">最新商品</a></li>
+                        <li><a href="#">特价商品</a></li>
+                        <li><a href="#">推荐商品</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">站内新闻</a>
+                    <ul class="item">
+                        <li><a href="#">国内新闻</a></li>
+                        <li><a href="#">体育信息</a></li>
+                        <li><a href="#">热点新闻</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">网站公告</a>
+                    <ul class="item">
+                        <li><a href="#">国内新闻</a></li>
+                        <li><a href="#">体育信息</a></li>
+                        <li><a href="#">热点新闻</a></li>
+                        <li><a href="#">体育信息</a></li>
+                        <li><a href="#">热点新闻</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">关于我们</a>
+                    <ul class="item">
+                        <li><a href="#">国内新闻</a></li>
+                        <li><a href="#">体育信息</a></li>
+                        <li><a href="#">热点新闻</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">在线帮助</a></li>
+            </ul>
+        </div>
+        adsfasdfasdfads
+        <script type="text/javascript">
+           //获取所有的菜单中的li节点并添加鼠标移入、移出事件
+           $("#menu ul li").mouseover(function(){
+                //$(this).find("ul.item").show();
+                $("ul.item:animated").not(this).stop().hide();
+                $(this).find("ul.item").slideDown("slow");
+           }).mouseout(function(){
+                //$(this).find("ul.item").hide();
+                $(this).find("ul.item").slideUp("slow");
+           });
+        </script>
+    </body>
+</html>

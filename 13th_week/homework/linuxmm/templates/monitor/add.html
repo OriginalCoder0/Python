@@ -1,0 +1,75 @@
+{% extends "monitor/base.html" %}
+{% load static from staticfiles %}
+
+{% block mytitle %}
+    添加主机-LinuxMM监控中心
+{% endblock %}
+
+{% block mainbody %}
+
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">Home</a></li>
+        <li class="active">添加主机</li>
+    </ol>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                <h3>输入主机信息</h3><br>
+
+                <form id="add_host" action="{% url 'monitor_insert' %}" class="form-horizontal" method="post"
+                      onsubmit="return check()">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">标签</span>
+                        <input type="text" id="tag" name="tag" class="form-control" placeholder="必填，如：我的服务器"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">地址</span>
+                        <input type="text" id="ip" name="ip" class="form-control" placeholder="必填，如：192.168.0.1"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">端口</span>
+                        <input type="text" class="form-control" placeholder="缺省值：22" aria-describedby="basic-addon1">
+                    </div>
+                    <br>
+                    <div align="center">
+                        <button type="submit" class="btn btn-primary">确定</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function check() {
+            if ($("#tag").val() == '' || $("#ip").val() == '') {
+                alert("请输入标签名和IP地址！");
+                $("#tag").focus();
+                return false;
+            }
+            var exp = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
+            var reg = $("#ip").val().match(exp);
+            if (reg == null) {
+                alert("IP地址不合法，请检查！");
+                return false;
+            }
+            return true;
+        }
+
+        $(function () {
+
+        });
+    </script>
+
+
+{% endblock %}
+

@@ -1,0 +1,107 @@
+{% extends "monitor/base.html" %}
+{% load static from staticfiles %}
+
+{% block mytitle %}
+    首页-LinuxMM监控中心
+{% endblock %}
+
+{% block mainbody %}
+
+    <ol class="breadcrumb">
+        <li class="active">Home</li>
+    </ol>
+
+    <div class="container">
+        <div class="row">
+            <p>
+                <a href="{% url 'monitor_add' %}"><button type="button" class="btn btn-primary">添加主机</button></a>
+            </p>
+        </div>
+
+        <div class="row">
+
+            <div class="panel panel-primary">
+                <!-- Default panel contents -->
+                <div class="panel-heading">远程主机</div>
+
+                <!-- Table -->
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>标签</th>
+                        <th>IP</th>
+                        <th>CPU</th>
+                        <th>内存</th>
+                        <th>硬盘</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+
+                    {% for host in hostlist %}
+                        <tr>
+                            <td>{{ host.id }}</td>
+                            <td><span class="label label-default" style="font-size: small">{{ host.tag }}</span></td>
+                            <td>{{ host.ip }}</td>
+                            <td><span>{{ host.cpu }}</span>{% if host.cpu %} 核{% endif %}</td>
+                            <td><span>{{ host.mem }}</span>{% if host.mem %} GB{% endif %}</td>
+                            <td><span>{{ host.disk }}</span>{% if host.disk %} GB{% endif %}</td>
+                            <td>
+                                {% if host.stat == 0 %}
+                                    <span style="color: deeppink">未运行</span>
+                                {% elif host.stat == 1 %}
+                                    <span style="color: forestgreen">运行中</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <a href="{% url "details" host.id %}"><button type="button" class="btn btn-primary btn-sm">查看</button></a>
+                                    <a href="{% url "monitor_edit" host.id %}"><button type="button" class="btn btn-success btn-sm">编辑</button></a>
+                                    <a href="{% url "monitor_delete" host.id %}"><button type="button" class="btn btn-danger btn-sm">删除</button></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation" style="text-align: center">
+        <ul class="pagination">
+            <!-- 上一页 -->
+            <li {% if pIndex == 1 %}class="disabled"{% endif %}>
+                {% if pIndex == 1 %}
+                    <span aria-hidden="true">&laquo;</span>
+                {% else %}
+                    <a href="{% url 'index' pIndex|add:-1 %}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                {% endif %}
+            </li>
+
+            {% for page in pList %}
+                <li {% if page == pIndex %}class="active"{% endif %}>
+                    <!-- 设置当前页不能点击 -->
+                    {% if page == pIndex %}
+                        <span>{{ page }} <span class="sr-only">(current)</span></span>
+                    {% else %}
+                        <a href="{% url 'index' page %}">{{ page }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+            <!-- 下一页 -->
+            <li {% if pIndex == pNum %}class="disabled"{% endif %}>
+                {% if pIndex == pNum %}
+                    <span aria-hidden="true">&raquo;</span>
+                {% else %}
+                    <a href="{% url 'index' pIndex|add:1 %}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+
+{% endblock %}
+

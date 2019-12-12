@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*百分比与min-width，min-height,max-width,max-height结合，模拟响应式及流式布局，
+		容器会随浏览器大小改变而改变，min-width限制突变最小宽度，max-width限制最大宽度
+		从而保证其不失真*/
+		div{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+			background:pink;
+		}
+		div>img{
+			width:15%;
+			min-width:80px;
+			max-width:150px;
+			margin-left:5px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="68.jpg" alt="">
+		<img src="69.jpg" alt="">
+		<img src="70.jpg" alt="">
+		<img src="71.jpg" alt="">
+		<img src="72.jpg" alt="">
+		<img src="68.jpg" alt="">
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML实例</title>
+    </head>
+    <body>
+        <h3>HTML实例-- 多媒体标签（了解）</h3>
+        <audio src="./images/beidahuang.mp3" controls>
+            你的浏览器不支持audio音频标签
+        </audio>
+        <br/>
+		<audio controls="controls">
+			<source src="./images/beidahuang.mp3" type="audio/mpeg" />
+			你的浏览器不支持播放
+		</audio>
+        <br/>
+        
+        <video controls="controls" width="400" height="400">
+			<source src="./images/fun.mp4" type="video/mp4" />
+            你的浏览器不支持视频播放
+        </video>
+        
+        <br/><br/>
+        <video  controls loop poster="./images/tiao.jpg">
+            <source src="./images/movie.webm" type="video/webm" />
+            <source src="./images/fun.mp4" type="video/mp4" />
+			您的破浏览器该扔了，不支持视频标签
+		</video>
+        <br/><br/>
+        <embed src="./images/haowan.swf" width="300" height="300" />
+    </body>
+</html>

@@ -1,0 +1,17 @@
+@charset "gb2312";
+/* CSS Document */
+/* ------------------------------------------------------------
+   版本: XHTML 1.0
+   作者: 邰增涛
+     QQ: 494762513
+  Email: taizengtao@163.com
+------------------------------------------------------------ */
+/*==============================公共部分开始==============================*/
+*{ margin:0; padding:0;}/*css 重置*/
+body{font:normal 12px/1.5 "宋体",Verdana, Geneva, sans-serif; color:#000; overflow:hidden;}
+ul{ list-style:none;}
+img{ border:0 none;}
+.clear{ clear:both;}
+a{ color:#000; text-decoration:none;}
+a:hover{ color:#f00; text-decoration:underline;}
+/*==============================公共部分结束==============================*/

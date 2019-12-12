@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery实例</title>
+        <script type="text/javascript" src="./jquery-3.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                //获取所有按钮并添加点击事件
+                $("button").click(function(){
+                    //获取输入框中的内容
+                    var tname = $("input[name='tname']").val()
+                    //根据按钮上的内容执行对象的操作
+                    switch($(this).html()){
+                        case "前添加":
+                            $("<li>"+tname+"</li>").insertBefore("li.cc");
+                            break;
+                        case "后追加":
+                            $("<li>"+tname+"</li>").insertAfter("li.cc");
+                            break;
+                    }
+                    
+                });
+                
+                //获取li节点并添加点击事件
+                $("li").click(function(){
+                    $("li").removeClass("cc");
+                    $(this).addClass("cc");
+                });
+            });
+        </script>
+        <style type="text/css">
+            ul,li{margin:0px;padding:0px;}
+            ul{list-style:none;}
+            ul li{line-height:30px;margin-bottom:5px;background-color:#ddd;}
+            ul li:hover{background-color:#fc0;}
+            ul li.cc{background-color:#f0c;}
+        </style>
+    </head>
+    <body>
+        <h3 id="hid">jQuery实例--文档处理--外部插入</h3>
+        <ul class="uu">
+            <li>苹果</li>
+            <li>橘子</li>
+            <li>哈密瓜</li>
+            <li>菠萝</li>
+            <li>芒果</li>
+        </ul>
+        名称：<input type="text" name="tname"/>
+        <button>前添加</button>
+        <button>后追加</button>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*1. HTML选择器*/
+		/*h1{color:red;}
+		/*li{color:green;font-size:18px;} /*网页中所有的li都采用此样式*/
+
+		/*2. 类选择器*/
+		/*
+		.cc{color:red;} /*class属性值为cc的所有标签采用此样式*/
+		/*li.cc{background-color:#ddd;} /*class属性值为cc的所有li标签采用此样式*/
+
+		/*3. Id选择器*/
+		/*#hid{color:red;} /*id属性值为hid的采用此样式*/
+
+		/*4. 包含式（关联式）选择器 */
+		/*ul li{color:red;} /*ul里面的li标签采用此样式*/
+		/*ol li{color:green;} /*ul里面的li采用此样式*/
+
+		/*5. 选择器组*/
+		h1,h2,h3,h4,h5,h6{color:red;} /*所有的h标签都采用此样式*/
+
+
+		/*伪类选择器*/
+		a:link {color: #FF0000; text-decoration: none}  /* 未访问的链接 */
+		a:visited {color: #00FF00; text-decoration: none}/* 已访问的链接 */
+		a:hover {color: #FF00FF; text-decoration: underline}     /* 鼠标在链接上 */
+		a:active {color: #0000FF; text-decoration: underline}     /* 激活链接 */
+
+
+		ul li{color:red;}
+		ul li:hover{color:green;}
+	</style>
+</head>
+<body>
+
+	<h1 class="cc" id="hid">CSS样式表实例--选择器的类型</h1>
+	你的爱好：
+	<ul>
+		<li>看书</li>
+		<li class="cc">上网</li>
+		<li>爬山</li>
+		<li>唱歌</li>
+	</ul>
+
+	<ol type="a">
+		<li>看书</li>
+		<li>上网</li>
+		<li><a href="http://www.baidu.com?id=q34radsf">爬山</a></li>
+		<li class="cc">唱歌</li>
+	</ol>
+
+	<dl>
+		<dt>问：HTML?</dt>
+		<dd class="cc">答：超文本标记语言</dd>
+		<dt>问：CSS?</dt>
+		<dd>答：层叠样式表</dd>
+	</dl>
+</body>
+</html>

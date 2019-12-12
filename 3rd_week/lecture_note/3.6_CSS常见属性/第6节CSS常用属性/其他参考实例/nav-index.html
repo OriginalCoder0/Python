@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>nav-index_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+<meta name="copyright" content="www.doyoe.com" />
+<style>
+html,body{margin:0;}
+button{position:absolute;}
+button#b1{
+	top:0;left:50%;
+	nav-index:1;
+	nav-right:#b2;nav-left:#b4;
+	nav-down:#b2;nav-up:#b4;
+}
+button#b2{
+	top:50%;right:0;
+	nav-index:2;
+	nav-right:#b3;nav-left:#b1;
+	nav-down:#b3;nav-up:#b1;
+}
+button#b3{
+	left:50%;bottom:0;
+	nav-index:3;
+	nav-right:#b4;nav-left:#b2;
+	nav-down:#b4;nav-up:#b2;
+}
+button#b4{
+	top:50%;left:0;
+	nav-index:4;
+	nav-right:#b1;nav-left:#b3;
+	nav-down:#b1;nav-up:#b3;
+}
+</style>
+</head>
+<body>
+<div class="test" style="height:1000px">
+	<button id="b1">button1</button>
+	<button id="b2">button2</button>
+	<button id="b3">button3</button>
+	<button id="b4">button4</button>
+	
+</div>
+
+</body>
+</html>
+	

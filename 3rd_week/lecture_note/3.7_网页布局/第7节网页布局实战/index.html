@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>DIV+CSS网站布局实例</title>
+        <style type="text/css">
+            /*公共样式*/
+            body,div,span,a,h1,h2,h3,h4,h5,h6,ul,li,ol,table,tr,td,th,p,img{margin:0px;padding:0px}
+            ul{list-style: none;}
+            .clear{clear:both;width:100%;height:5px;}
+            
+            #container{width:1200px;margin:0px auto;}
+
+            #header{width:100%;height:100px;background-color:#ddd;}
+
+            #nav{width:100%;height:50px;margin-top:5px;background:url("./images/repeat.png") repeat-x 0px 0px; }
+            #nav ul li{width:100px;float:left;line-height:50px; margin-left:40px;}
+            #nav ul li a{
+                color:#fff;
+                text-decoration: none;
+                line-height: 50px;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                width:100px;
+                height:50px;
+                display: block;
+            }
+            #nav ul li a:hover{color:blue;background-color:#fff;}
+
+            
+            #main{width:100%;}
+            
+            #article{width:900px;height:600px;float:right;background-color:#ffb6c1;}
+            #aside{width:292px;height:600px;float:left;background-color:#fafad2;}
+
+            #footer{width:100%;height:70px;margin-top:5px;background-color:#8fbc8f; }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <!-- 页头开始 -->
+            <div id="header">
+
+
+            </div>
+            <!-- 页头结束 -->
+
+            <!-- 导航开始-->
+            <div id="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">商品展示</a></li>
+                    <li><a href="#">站内新闻</a></li>
+                    <li><a href="#">在线答疑</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">在线帮助</a></li>
+                </ul>
+            </div>
+            <!-- 导航结束-->
+            <div class="clear"></div>
+            <div id="main">
+                <div id="article"></div>
+                <div id="aside"></div>
+            </div>
+            <div class="clear"></div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>登录-LinuxMM监控中心</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <style>
+        body {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .foot-wrap {
+            /* background-color: #373f48; */
+            background-color: #272727;
+            height: 40px;
+        }
+
+        .foot-wrap p {
+            color: #9C9C9C;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url "index" %}">LinuxMM 监控中心</a>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <h3 align="center">系统登录</h3><br>
+            <p><img src="{% static 'images/LinuxMM.jpeg' %}"></p>
+            <div align="center">
+                <form id="login-form" method="post" class="panel-default" action="{% url 'dologin' %}">
+                {% csrf_token %}
+                账号：<input type="text" name="username" class="span2" placeholder="输入账号"/>
+                密码：<input type="password" name="password" class="span2" placeholder="输入密码"/>
+
+                <button type="submit" class="btn btn-primary btn-sm">登录</button>
+            </form>
+            </div>
+            <br>
+            {% if info %}
+                <div class="alert alert-danger" role="alert"><span>{{ info }}</span> 测试账号：admin，密码：20181024</div>
+            {% else %}
+                <div class="alert alert-info" role="alert">温馨提示！测试账号：admin，密码：20181024</div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+
+<footer class="container-fluid foot-wrap navbar-fixed-bottom">
+    <div class="container">
+        <div class="row" align="center">
+            <p>Copyright &copy; 2018 by 东哥的Python实验室. 版权所有</p>
+            <!--<br>Tel: +86 15899962740-->
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
